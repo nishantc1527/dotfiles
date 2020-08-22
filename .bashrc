@@ -27,12 +27,6 @@
 
 test -s ~/.alias && . ~/.alias || true
 
-export FLAME_HOME="$HOME/projects/java/Flame"
-export PATH="$FLAME_HOME/bin:$PATH"
-
-export GOPATH="$HOME/projects/go"
-export PATH="$GOPATH/bin:$PATH"
-
 alias ls="ls -la --color=always"
 
 for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
