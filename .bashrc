@@ -33,8 +33,33 @@ export PATH="$FLAME_HOME/bin:$PATH"
 export GOPATH="$HOME/projects/go"
 export PATH="$GOPATH/bin:$PATH"
 
-alias ls="ls -la"
+alias ls="ls -la --color=always"
 
 for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
 do alias $elem="exit"
 done
+
+alias zypper='sudo zypper'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Alias's for multiple directory listing commands
+alias la='ls -Alh' # show hidden files
+alias ls='ls -aFh --color=always' # add colors and file type extensions
+alias lx='ls -lXBh' # sort by extension
+alias lk='ls -lSrh' # sort by size
+alias lc='ls -lcrh' # sort by change time
+alias lu='ls -lurh' # sort by access time
+alias lr='ls -lRh' # recursive ls
+alias lt='ls -ltrh' # sort by date
+alias lm='ls -alh |more' # pipe through 'more'
+alias lw='ls -xAh' # wide listing format
+alias ll='ls -Fls' # long listing format
+alias labc='ls -lap' #alphabetical sort
+alias lf="ls -l | egrep -v '^d'" # files only
+alias ldir="ls -l | egrep '^d'" # directories only
+
+alias sourceb="source .bashrc"

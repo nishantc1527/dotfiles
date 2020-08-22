@@ -1,12 +1,3 @@
-" Btw, if you don't install some of these, you won't get an error. It's just for functionality.
-"
-" THINGS TO INSTALL:
-" 1. pylint: pip install pylint
-" 2. javac: using your package manager.
-" 3. shellcheck: using your package manager.
-" 4. Clang, gcc: using your package manager.
-" 5. Cargo, rustc, rustfmt: using rustup (or something else, but rustup is recommended)
-
 " --------------------------------------------------------------------- PLUGINS
 
 call plug#begin('~/.vim/plugged')
@@ -14,8 +5,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'tpope/vim-fugitive'
 Plug 'chiel92/vim-autoformat'
 Plug 'joshdick/onedark.vim'
@@ -25,6 +14,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ervandew/supertab'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/vim-lsp'
 
 call plug#end()
 
@@ -70,17 +62,11 @@ setlocal spell
 set spelllang=en
 
 " ----------------------------------------------------------------- ONE DARK THEME
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+
 if (empty($TMUX))
   if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
   if (has("termguicolors"))
     set termguicolors
   endif
@@ -107,21 +93,16 @@ let g:lightline = {
 
 " -------------------------------------------------------------------- ALE
 
-" Shorten error/warning flags
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
-" I have some custom icons for errors and warnings but feel free to change them.
-let g:ale_sign_error = '✘✘'
-let g:ale_sign_warning = '⚠⚠'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
 
-" Disable or enable loclist at the bottom of vim
-" Comes down to personal preferance.
 let g:ale_open_list = 0
 let g:ale_loclist = 0
 
 nnoremap <leader>d :ALEGoToDefinition<CR>
 
-" Setup compilers for languages
 let g:ale_linters = {
       \  'python': ['pylint'],
       \  'java': ['javac'],
@@ -132,7 +113,6 @@ let g:ale_linters = {
 
 " ---------------------------------------------------------------- NERD TREE
 
-" Open when no files were speficied on vim launch
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -140,22 +120,17 @@ let NERDTreeShowHidden=1
 
 " ----------------------------------------------------------------- MAPPINGS
 
-" move buffers with <leader><direction>
 nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 
-" Open Terminal With <leader>s
 nnoremap <leader>s :term<cr>
 
-" Toggle Nerd Tree With <leader>t
 nnoremap <leader>t :NERDTreeToggle<cr>
 
-" Open Vimrc With <leader>ev
 nnoremap <leader>ev :e ~/.vimrc<cr>
 
-" Sort Using <leader>s
 vnoremap <leader>s :sort<cr>
 
 vnoremap < <gv
@@ -178,7 +153,6 @@ nnoremap <leader>gj :diffget //3<cr>
 
 " ------------------------------------------------------------------ TAGBAR
 
-" Ctrl-b to open Tagbar
 nnoremap <leader>p :TagbarToggle<CR>
 
 " ----------------------------------------------------------------- LSP
@@ -214,6 +188,33 @@ augroup lsp_install
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
+let g:asyncomplete_auto_popup = 0
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ asyncomplete#force_refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" allow modifying the completeopt variable, or it will
+" be overridden all the time
+let g:asyncomplete_auto_completeopt = 0
+
+set completeopt=menuone,noinsert,noselect,preview
+
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
 " ---------------------------------------------------------- AUTOFORMAT
 
 au BufWrite * :Autoformat
@@ -242,5 +243,3 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
 " Word completion with custom spec with pop-up layout option
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
-
-nnoremap <leader>sp mm[s1z=`m<cr>
