@@ -2,6 +2,7 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'metalelf0/supertab'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
@@ -12,11 +13,16 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ervandew/supertab'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'luochen1990/rainbow'
+Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdcommenter'
+Plug 'morhetz/gruvbox'
+Plug 'sickill/vim-monokai'
+Plug 'jnurmine/Zenburn'
 
 call plug#end()
 
@@ -61,22 +67,26 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 setlocal spell
 set spelllang=en
 
+" ----------------------------------------------------------------- COLORSCHEME
+
+" Change the deafult colorscheme here
+" Depending on the colorscheme you choose, you may want to uncomment some of
+" the settings below. See a list of all the available colors by typing :Colors
+colorscheme Tomorrow-Night-Eighties
+
+" -------------------------------------------------------------------- GRUVBOX
+
+" syntax enable
+" set background=dark
+
 " ----------------------------------------------------------------- ONE DARK THEME
 
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+" let g:onedark_hide_endofbuffer = 1
+" let g:omnedark_terminal_italics = 1
 
-syntax on
-colorscheme onedark
+" ----------------------------------------------------------------- ZENBURN
 
-let g:onedark_hide_endofbuffer = 1
-let g:omnedark_terminal_italics = 1
+" set t_Co=256
 
 " ---------------------------------------------------------------- LIGHTLINE
 
@@ -118,6 +128,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let NERDTreeShowHidden=1
 
+nnoremap <leader>t :NERDTreeToggle<cr>
+
 " ----------------------------------------------------------------- MAPPINGS
 
 nnoremap <leader>h :wincmd h<cr>
@@ -126,8 +138,6 @@ nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 
 nnoremap <leader>s :term<cr>
-
-nnoremap <leader>t :NERDTreeToggle<cr>
 
 nnoremap <leader>ev :e ~/.vimrc<cr>
 
@@ -243,3 +253,37 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
 " Word completion with custom spec with pop-up layout option
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
+
+" ---------------------------------------------------------- RAINBOW
+
+let g:rainbow_active = 1
+
+" --------------------------------------------------------- GIT GUTTER
+
+set updatetime=100
+
+" ------------------------------------------------------- NERD COMMENTER
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
