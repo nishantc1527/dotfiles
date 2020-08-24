@@ -4,10 +4,15 @@ for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
 do alias $elem="exit"
 done
 
+for elem in {c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}
+do alias $elem="clear"
+done
+
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias ....='cd ../..'
+alias .....='cd ../../..'
+alias ......='cd ../../..'
 
 # Alias's for multiple directory listing commands
 alias la='ls -lAlh' # show hidden files

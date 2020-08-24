@@ -23,10 +23,13 @@ Plug 'preservim/nerdcommenter'
 Plug 'morhetz/gruvbox'
 Plug 'sickill/vim-monokai'
 Plug 'jnurmine/Zenburn'
+Plug 'andreasvc/vim-256noir'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'huyvohcmc/atlas.vim'
 
 call plug#end()
 
-" -------------------------------------------------------------------- RANDOM
+" -------------------------------------------------------------------- RANDOM SETTINGS
 
 " Line Number / Relative Line Number Hybrid
 set number relativenumber
@@ -67,13 +70,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 setlocal spell
 set spelllang=en
 
-" ----------------------------------------------------------------- COLORSCHEME
-
-" Change the deafult colorscheme here
-" Depending on the colorscheme you choose, you may want to uncomment some of
-" the settings below. See a list of all the available colors by typing :Colors
-colorscheme Tomorrow-Night-Eighties
-
 " -------------------------------------------------------------------- GRUVBOX
 
 " syntax enable
@@ -81,17 +77,47 @@ colorscheme Tomorrow-Night-Eighties
 
 " ----------------------------------------------------------------- ONE DARK THEME
 
-" let g:onedark_hide_endofbuffer = 1
-" let g:omnedark_terminal_italics = 1
+let g:onedark_hide_endofbuffer = 1
+let g:omnedark_terminal_italics = 1
 
-" ----------------------------------------------------------------- ZENBURN
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
-" set t_Co=256
+" --------------------------------------------------------------- 256 NOIR
 
-" ---------------------------------------------------------------- LIGHTLINE
+" " Make the current line black
+" set cursorline
+" highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+" autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
+" autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+
+" ----------------------------------------------------------------- COLORSCHEME
+
+" Change the default colorscheme here
+" Depending on the colorscheme you choose, you may want to uncomment some of
+" the settings above. See a list of all the available colors by typing
+" :Colors. Right now, my color scheme is gruvbox (I probably changed it and
+" forgot to update this part), but if you want to change it
+" uncomment the part that says "GRUVBOX" and comment the correct colorscheme
+" section.
+colorscheme onedark
+
+" ------------------------------------------------------------------ LIGHTLINE
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -266,9 +292,6 @@ set updatetime=100
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
 
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
