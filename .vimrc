@@ -2,7 +2,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'metalelf0/supertab'
 Plug 'preservim/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
@@ -13,10 +12,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/vim-lsp'
 Plug 'luochen1990/rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdcommenter'
@@ -26,6 +21,10 @@ Plug 'jnurmine/Zenburn'
 Plug 'andreasvc/vim-256noir'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'huyvohcmc/atlas.vim'
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
 
 call plug#end()
 
@@ -118,6 +117,7 @@ colorscheme onedark
 " ------------------------------------------------------------------ LIGHTLINE
 
 let g:lightline = {
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -193,63 +193,16 @@ nnoremap <leader>p :TagbarToggle<CR>
 
 " ----------------------------------------------------------------- LSP
 
-if executable('pyls')
-  " pip install python-language-server
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
-endif
+" Always draw sign column. Prevent buffer moving when adding/deleting sign.
+set signcolumn=yes
 
-function! s:on_lsp_buffer_enabled() abort
-  setlocal omnifunc=lsp#complete
-  setlocal signcolumn=yes
-  if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  nmap <buffer> gd <plug>(lsp-definition)
-  nmap <buffer> gr <plug>(lsp-references)
-  nmap <buffer> gi <plug>(lsp-implementation)
-  nmap <buffer> gt <plug>(lsp-type-definition)
-  nmap <buffer> <leader>rn <plug>(lsp-rename)
-  nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-  nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-  nmap <buffer> K <plug>(lsp-hover)
+" nnoremap <leader>K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <leader>gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
 
-  " refer to doc to add more commands
-endfunction
-
-augroup lsp_install
-  au!
-  " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
-
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
-imap <c-space> <Plug>(asyncomplete_force_refresh)
-
-let g:asyncomplete_auto_popup = 0
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ asyncomplete#force_refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" allow modifying the completeopt variable, or it will
-" be overridden all the time
-let g:asyncomplete_auto_completeopt = 0
-
-set completeopt=menuone,noinsert,noselect,preview
-
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+let g:LanguageClient_serverCommands = {
+      \ 'rust': ['rls']
+      \ }
 
 " ---------------------------------------------------------- AUTOFORMAT
 
@@ -279,6 +232,10 @@ inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
 " Word completion with custom spec with pop-up layout option
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
+
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>L :Lines<cr>
+nnoremap <leader>H :History<cr>
 
 " ---------------------------------------------------------- RAINBOW
 
