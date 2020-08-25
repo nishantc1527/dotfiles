@@ -25,6 +25,8 @@ Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
       \ }
+Plug 'lifepillar/vim-mucomplete'
+Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
@@ -193,15 +195,21 @@ nnoremap <leader>p :TagbarToggle<CR>
 
 " ----------------------------------------------------------------- LSP
 
+let g:LanguageClient_autoStart = 1
+" We don't want our quickfix list always spammed with diagnostics
+let g:LanguageClient_diagnosticsList = 'Disabled'
+
 " Always draw sign column. Prevent buffer moving when adding/deleting sign.
 set signcolumn=yes
 
-" nnoremap <leader>K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <leader>gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
+nnoremap <leader>z :call LanguageClient_contextMenu()<CR>
 
 let g:LanguageClient_serverCommands = {
-      \ 'rust': ['rls']
+      \ 'rust': ['rls'],
+      \ 'python': ['pyls'],
+      \ 'cpp': ['clangd']
       \ }
 
 " ---------------------------------------------------------- AUTOFORMAT
@@ -267,3 +275,19 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+" --------------------------------------------------------- MUCOMPLETE
+
+" Mandatory options for plugin to work
+set completeopt+=menuone
+set completeopt+=noselect
+" Shut off completion messages
+set shortmess+=c
+" prevent a condition where vim lags due to searching include files.
+set complete-=i
+let g:mucomplete#enable_auto_at_startup = 1
+" :help mucomplete#chains for more details
+let g:mucomplete#chains = {}
+let g:mucomplete#chains.default  = ['path', 'omni', 'keyn', 'dict', 'uspl', 'ulti']
+let g:mucomplete#chains.markdown = ['path', 'keyn', 'dict', 'uspl']
+let g:mucomplete#chains.vim      = ['path', 'keyn', 'dict', 'uspl']
