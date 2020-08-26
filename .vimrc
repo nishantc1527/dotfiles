@@ -2,35 +2,34 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'preservim/nerdtree'
-Plug 'dense-analysis/ale'
-Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'andreasvc/vim-256noir'
 Plug 'chiel92/vim-autoformat'
-Plug 'joshdick/onedark.vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'dense-analysis/ale'
+Plug 'huyvohcmc/atlas.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'jnurmine/Zenburn'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
-Plug 'airblade/vim-gitgutter'
-Plug 'preservim/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-monokai'
-Plug 'jnurmine/Zenburn'
-Plug 'andreasvc/vim-256noir'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'huyvohcmc/atlas.vim'
-Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
+Plug 'tpope/vim-fugitive'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
 
 " -------------------------------------------------------------------- RANDOM SETTINGS
+
+syntax enable
 
 " Line Number / Relative Line Number Hybrid
 set number relativenumber
@@ -53,9 +52,6 @@ set noswapfile
 
 filetype plugin indent on
 
-" Open Terminal In The Same Directory
-autocmd BufEnter * silent! lcd %:p:h
-
 let mapleader = " "
 
 set nocompatible
@@ -71,10 +67,12 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 setlocal spell
 set spelllang=en
 
+" Open Terminal In The Same Directory
+autocmd BufEnter * silent! lcd %:p:h
+
 " -------------------------------------------------------------------- GRUVBOX
 
-" syntax enable
-" set background=dark
+set background=dark
 
 " ----------------------------------------------------------------- ONE DARK THEME
 
@@ -99,21 +97,16 @@ endif
 
 " --------------------------------------------------------------- 256 NOIR
 
-" " Make the current line black
-" set cursorline
-" highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
-" autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
-" autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+" Make the current line black
+set cursorline
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
+autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
 
 " ----------------------------------------------------------------- COLORSCHEME
 
-" Change the default colorscheme here
-" Depending on the colorscheme you choose, you may want to uncomment some of
-" the settings above. See a list of all the available colors by typing
-" :Colors. Right now, my color scheme is gruvbox (I probably changed it and
-" forgot to update this part), but if you want to change it
-" uncomment the part that says "GRUVBOX" and comment the correct colorscheme
-" section.
+" Change the default colorscheme here. See all available colors by typing
+" :Colors.
 colorscheme onedark
 
 " ------------------------------------------------------------------ LIGHTLINE
@@ -202,14 +195,16 @@ let g:LanguageClient_diagnosticsList = 'Disabled'
 " Always draw sign column. Prevent buffer moving when adding/deleting sign.
 set signcolumn=yes
 
-nnoremap <leader>gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <leader>d :call LanguageClient#textDocument_definition()<CR>
 nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
 nnoremap <leader>z :call LanguageClient_contextMenu()<CR>
 
 let g:LanguageClient_serverCommands = {
       \ 'rust': ['rls'],
       \ 'python': ['pyls'],
-      \ 'cpp': ['clangd']
+      \ 'cpp': ['clangd'],
+      \ 'c': ['clangd'],
+      \ 'groovy': ['groovy-language-server']
       \ }
 
 " ---------------------------------------------------------- AUTOFORMAT
