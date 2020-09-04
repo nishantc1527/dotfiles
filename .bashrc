@@ -1,3 +1,5 @@
+source /etc/bashrc
+
 test -s ~/.alias && . ~/.alias || true
 
 for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
@@ -30,4 +32,6 @@ alias labc='ls -lap' #alphabetical sort
 alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
 
-alias sourceb="source .bashrc"
+alias cls="clear"
+
+export PATH="/home/nchatterjee/.local/share/vim-lsp-settings/servers/eclipse-jdt-ls:$PATH"

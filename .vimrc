@@ -24,6 +24,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'mattn/vim-lsp-settings'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -144,8 +145,8 @@ let g:ale_linters = {
 
 " ---------------------------------------------------------------- NERD TREE
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let NERDTreeShowHidden=1
 
@@ -204,7 +205,8 @@ let g:LanguageClient_serverCommands = {
       \ 'python': ['pyls'],
       \ 'cpp': ['clangd'],
       \ 'c': ['clangd'],
-      \ 'groovy': ['groovy-language-server']
+      \ 'groovy': ['groovy-language-server'],
+      \ 'java': ['eclipse-jdt-ls']
       \ }
 
 " ---------------------------------------------------------- AUTOFORMAT
