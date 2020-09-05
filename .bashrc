@@ -33,5 +33,3 @@ alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
 
 alias cls="clear"
-
-export PATH="/home/nchatterjee/.local/share/vim-lsp-settings/servers/eclipse-jdt-ls:$PATH"
