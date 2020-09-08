@@ -3,7 +3,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'andreasvc/vim-256noir'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'chiel92/vim-autoformat'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'dense-analysis/ale'
@@ -13,18 +15,16 @@ Plug 'jnurmine/Zenburn'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar'
+Plug 'mattn/vim-lsp-settings'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-monokai'
 Plug 'tpope/vim-fugitive'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'lifepillar/vim-mucomplete'
-Plug 'mattn/vim-lsp-settings'
-Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 

@@ -50,6 +50,8 @@ alias cls="clear"
 
 alias commit="git commit"
 alias push="git push"
+alias add="git add ."
+alias status="git status"
 
 # Git branch in prompt.
 
