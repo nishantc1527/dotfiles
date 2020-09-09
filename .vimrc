@@ -2,6 +2,8 @@
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'Shougo/echodoc.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-gitgutter'
 Plug 'andreasvc/vim-256noir'
@@ -25,6 +27,7 @@ Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-monokai'
 Plug 'tpope/vim-fugitive'
+Plug 'stsewd/fzf-checkout.vim'
 
 call plug#end()
 
@@ -133,8 +136,6 @@ let g:ale_sign_warning = '⚠'
 let g:ale_open_list = 0
 let g:ale_loclist = 0
 
-nnoremap <leader>d :ALEGoToDefinition<CR>
-
 let g:ale_linters = {
       \  'python': ['pylint'],
       \  'java': ['javac'],
@@ -182,6 +183,7 @@ nnoremap <leader>gs :G<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
 nnoremap <leader>gf :diffget //2<cr>
 nnoremap <leader>gj :diffget //3<cr>
+nnoremap <leader>gc :GBranches<cr>
 
 " ------------------------------------------------------------------ TAGBAR
 
@@ -196,18 +198,32 @@ let g:LanguageClient_diagnosticsList = 'Disabled'
 " Always draw sign column. Prevent buffer moving when adding/deleting sign.
 set signcolumn=yes
 
-nnoremap <leader>d :call LanguageClient#textDocument_definition()<CR>
-nnoremap <leader>rn :call LanguageClient#textDocument_rename()<CR>
-nnoremap <leader>z :call LanguageClient_contextMenu()<CR>
-
 let g:LanguageClient_serverCommands = {
       \ 'rust': ['rls'],
       \ 'python': ['pyls'],
-      \ 'cpp': ['clangd'],
       \ 'c': ['clangd'],
+      \ 'cpp': ['clangd'],
       \ 'groovy': ['groovy-language-server'],
-      \ 'java': ['eclipse-jdt-ls']
+      \ 'java': ['/home/nchatterjee/.local/share/vim-lsp-settings/servers/eclipse-jdt-ls/eclipse-jdt-ls'],
+      \ 'ruby': ['solargraph', 'socket']
       \ }
+
+nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
+nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
+nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
+nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
+nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
+nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
+nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+
+" ------------------------------------------------------------- ECHODOC
+
+set cmdheight=2
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'signature'
 
 " ---------------------------------------------------------- AUTOFORMAT
 
@@ -241,6 +257,8 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'hei
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>L :Lines<cr>
 nnoremap <leader>H :History<cr>
+
+let $FZF_DEFAULT_OPTS='--reverse'
 
 " ---------------------------------------------------------- RAINBOW
 
