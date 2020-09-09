@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("datastructures.trees.binarysearchtrees.avltree" package nil nil [1 56])
+            ("datastructures.trees.binarysearchtrees.BinaryTree" include nil nil [58 115])
+            ("datastructures.trees.binarysearchtrees.Color" include nil nil [116 168])
+            ("datastructures.trees.binarysearchtrees.Node" include nil nil [169 220])
+            ("java.util.*" include nil nil [221 240])
+            ("org.checkerframework.checker.nullness.qual.NonNull" include nil nil [241 299]))          
+      :file "AVLTree.java"
+      :pointmax 19238
+      :fsize 19872
+      :lastmodtime '(24312 2022 722133 700000)
+      :unmatched-syntax '((BRACE_BLOCK 416 . 19237) (RSHIFT 413 . 415) (IDENTIFIER 412 . 413) (LT 411 . 412) (IDENTIFIER 407 . 411) (LT 406 . 407) (IDENTIFIER 398 . 406) (COMMA 396 . 397) (GT 395 . 396) (IDENTIFIER 394 . 395) (LT 393 . 394) (IDENTIFIER 383 . 393) (IMPLEMENTS 372 . 382) (RSHIFT 369 . 371) (IDENTIFIER 368 . 369) (LT 367 . 368) (IDENTIFIER 357 . 367) (EXTENDS 349 . 356) (IDENTIFIER 347 . 348) (LT 346 . 347) (PAREN_BLOCK 318 . 325) (IDENTIFIER 301 . 318) (BRACE_BLOCK 416 . 19239) (RSHIFT 413 . 415) (IDENTIFIER 412 . 413) (LT 411 . 412) (IDENTIFIER 407 . 411) (LT 406 . 407) (IDENTIFIER 398 . 406) (COMMA 396 . 397) (GT 395 . 396) (IDENTIFIER 394 . 395) (LT 393 . 394) (IDENTIFIER 383 . 393) (IMPLEMENTS 372 . 382) (RSHIFT 369 . 371) (IDENTIFIER 368 . 369) (LT 367 . 368) (IDENTIFIER 357 . 367) (EXTENDS 349 . 356) (IDENTIFIER 347 . 348) (LT 346 . 347) (PAREN_BLOCK 318 . 325) (IDENTIFIER 301 . 318) (BRACE_BLOCK 416 . 19237) (RSHIFT 413 . 415) (IDENTIFIER 412 . 413) (LT 411 . 412) (IDENTIFIER 407 . 411) (LT 406 . 407) (IDENTIFIER 398 . 406) (COMMA 396 . 397) (GT 395 . 396) (IDENTIFIER 394 . 395) (LT 393 . 394) (IDENTIFIER 383 . 393) (IMPLEMENTS 372 . 382) (RSHIFT 369 . 371) (IDENTIFIER 368 . 369) (LT 367 . 368) (IDENTIFIER 357 . 367) (EXTENDS 349 . 356) (IDENTIFIER 347 . 348) (LT 346 . 347) (PAREN_BLOCK 318 . 325) (IDENTIFIER 301 . 318) (BRACE_BLOCK 416 . 19235) (RSHIFT 413 . 415) (IDENTIFIER 412 . 413) (LT 411 . 412) (IDENTIFIER 407 . 411) (LT 406 . 407) (IDENTIFIER 398 . 406) (COMMA 396 . 397) (GT 395 . 396) (IDENTIFIER 394 . 395) (LT 393 . 394) (IDENTIFIER 383 . 393) (IMPLEMENTS 372 . 382) (RSHIFT 369 . 371) (IDENTIFIER 368 . 369) (LT 367 . 368) (IDENTIFIER 357 . 367) (EXTENDS 349 . 356) (IDENTIFIER 347 . 348) (LT 346 . 347) (PAREN_BLOCK 318 . 325) (IDENTIFIER 301 . 318))))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!main!java!datastructures!trees!binarysearchtrees!avltree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

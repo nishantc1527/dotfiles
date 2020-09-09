@@ -1,0 +1,42 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("util.h" include nil nil [22 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [50 59])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60 73]))                  
+                :type "int")
+                nil [41 207]))          
+      :file "main.cpp"
+      :pointmax 208
+      :fsize 207
+      :lastmodtime '(24350 21175 78051 185000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("decltype" function
+               (:arguments 
+                  ( ("" variable (:type ("a" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69 72])
+                    ("" variable (:type ("b" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [73 75]))                  
+                :type "int")
+                nil [60 95]))          
+      :file "util.h"
+      :pointmax 96
+      :fsize 95
+      :lastmodtime '(24350 20599 335824 414000)
+      :unmatched-syntax '((punctuation 71 . 72) (punctuation 58 . 59) (punctuation 57 . 58) (semantic-list 44 . 56) (symbol 41 . 44) (symbol 36 . 40) (punctuation 34 . 35) (symbol 32 . 34) (TYPENAME 23 . 31) (punctuation 21 . 22) (symbol 19 . 21) (TYPENAME 10 . 18) (punctuation 9 . 10) (TEMPLATE 1 . 9))))
+  :file "!tmp!test_project1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

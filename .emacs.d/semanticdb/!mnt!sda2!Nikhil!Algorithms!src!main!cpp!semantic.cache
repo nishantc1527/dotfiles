@@ -1,0 +1,91 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MY_UTILS" variable (:constant-flag t) nil [26 34])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("unordered_map" include (:system-flag t) nil [56 80])
+            ("random" include (:system-flag t) nil [81 98])
+            ("my_utils" type
+               (:members 
+                  ( ("printArr" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("arr" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [160 180]))                          )
+                        (reparse-symbol namespacesubparts) [123 386])
+                    ("printArr" function
+                       (:template 
+                          ( ("Iter" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("start" variable (:type ("Iter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [432 443])
+                            ("end" variable (:type ("Iter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [444 453]))                          )
+                        (reparse-symbol namespacesubparts) [392 584])
+                    ("isSorted" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("arr" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [627 647]))                          )
+                        (reparse-symbol namespacesubparts) [590 815])
+                    ("sameElements" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("arr1" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("T" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [862 882])
+                            ("arr2" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("T" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol arg-sub-list) [883 903]))                          )
+                        (reparse-symbol namespacesubparts) [821 1145])
+                    ("createRandVector" function
+                       (:arguments 
+                          ( ("len" variable (:type "int") (reparse-symbol arg-sub-list) [1185 1193])
+                            ("min" variable (:type "int") (reparse-symbol arg-sub-list) [1194 1202])
+                            ("max" variable (:type "int") (reparse-symbol arg-sub-list) [1203 1211]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol namespacesubparts) [1151 1437]))                  
+                :type "namespace")
+                nil [100 1442]))          
+      :file "my_utils.h"
+      :pointmax 1451
+      :fsize 1514
+      :lastmodtime '(24311 43920 696180 700000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MY_UTILS")
+          )
+))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!main!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

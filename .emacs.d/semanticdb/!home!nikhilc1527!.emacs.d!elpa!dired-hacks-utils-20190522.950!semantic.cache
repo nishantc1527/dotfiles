@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode emacs-lisp-mode
+      :tags nil
+      :file "dired-hacks-utils-autoloads.el"
+      :pointmax 373
+      :fsize 625
+      :lastmodtime '(24338 34585 669407 750000)
+      :unmatched-syntax nil))
+  :file "!home!nikhilc1527!.emacs.d!elpa!dired-hacks-utils-20190522.950!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

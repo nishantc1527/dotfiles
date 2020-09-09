@@ -1,0 +1,36 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Solution" type
+               (:members 
+                  ( ("longestValidParentheses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [49 53])
+                            ("s" variable nil (reparse-symbol function_parameters) [55 56]))                          )
+                        (reparse-symbol indented_block_body) [21 811]))                  
+                :type "class")
+                nil [1 811])
+            ("a" variable nil nil [812 824])
+            ("print" code nil nil [825 870])
+            ("print" code nil nil [875 916])
+            ("print" code nil nil [921 963])
+            ("print" code nil nil [968 1061])
+            ("print" code nil nil [1067 1106])
+            ("print" code nil nil [1111 1151])
+            ("print" code nil nil [1156 1197])
+            ("print" code nil nil [1202 1244])
+            ("print" code nil nil [1249 1291]))          
+      :file "Solution.py"
+      :pointmax 1297
+      :fsize 1296
+      :lastmodtime '(24345 53914 827842 700000)
+      :unmatched-syntax nil))
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!LongestValidParentheses!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

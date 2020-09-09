@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "trees_test.cpp"
+      :pointmax 256
+      :fsize 255
+      :lastmodtime '(24317 14755 67933 800000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!test!cpp!datastructures!trees!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

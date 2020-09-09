@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "Solution.js"
+      :pointmax 476
+      :fsize 475
+      :lastmodtime '(24347 56598 696402 800000)
+      :unmatched-syntax '((FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83) (FUNCTION 69 . 77) (PAREN_BLOCK 77 . 83))))
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!FindMinimumInRotatedSortedArrayII!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

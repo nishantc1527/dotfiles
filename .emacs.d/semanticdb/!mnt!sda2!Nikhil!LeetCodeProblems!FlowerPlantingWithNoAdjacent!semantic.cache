@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [37 44])
+                    ("gardenNoAdj" function
+                       (:arguments 
+                          ( ("N" variable (:type "int") (reparse-symbol arg-sub-list) [76 82])
+                            ("paths" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [83 120]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [47 131]))                  
+                :type "class")
+                nil [20 134]))          
+      :file "Solution.cpp"
+      :pointmax 135
+      :fsize 134
+      :lastmodtime '(24336 54904 224613 500000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!FlowerPlantingWithNoAdjacent!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

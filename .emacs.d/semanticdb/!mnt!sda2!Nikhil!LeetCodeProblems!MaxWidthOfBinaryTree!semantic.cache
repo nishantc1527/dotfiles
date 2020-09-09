@@ -1,0 +1,36 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("Solution" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("widthOfBinaryTree" function
+                       (:arguments 
+                          ( ("root" variable (:type "TreeNode") (reparse-symbol formal_parameters) [51 64])
+                            ("" variable (:type "maxes") (reparse-symbol formal_parameters) [85 90])
+                            ("maxWidth" variable (:type "int") (reparse-symbol formal_parameters) [92 104])
+                            ("ind" variable (:type "BigInteger") (reparse-symbol formal_parameters) [106 120])
+                            ("level" variable (:type "int") (reparse-symbol formal_parameters) [122 131]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [29 791])
+                    ("widthOfBinaryTree" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("root" variable (:type "TreeNode") (reparse-symbol formal_parameters) [830 843]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [801 964]))                  
+                :type "class")
+                nil [1 966]))          
+      :file "Solution.java"
+      :pointmax 968
+      :fsize 967
+      :lastmodtime '(24333 14470 373195 800000)
+      :unmatched-syntax '((GT 83 . 84) (IDENTIFIER 66 . 70) (LT 70 . 71) (BRACE_BLOCK 843 . 964) (PAREN_BLOCK 827 . 842) (IDENTIFIER 810 . 827) (PUBLIC 799 . 805) (INT 806 . 809) (GT 83 . 84) (IDENTIFIER 66 . 70) (LT 70 . 71))))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!MaxWidthOfBinaryTree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("datastructures.trees.binarysearchtrees.redblacktree" package nil nil [1 61])
+            ("datastructures.trees.binarysearchtrees.BinaryTree" include nil nil [63 120])
+            ("datastructures.trees.binarysearchtrees.Color" include nil nil [121 173])
+            ("datastructures.trees.binarysearchtrees.Node" include nil nil [174 225])
+            ("java.util.*" include nil nil [226 245])
+            ("org.checkerframework.checker.nullness.qual.NonNull" include nil nil [246 304]))          
+      :file "RedBlackTree.java"
+      :pointmax 11982
+      :fsize 12424
+      :lastmodtime '(24306 38497 477625 600000)
+      :unmatched-syntax '((BRACE_BLOCK 426 . 11981) (RSHIFT 423 . 425) (IDENTIFIER 422 . 423) (LT 421 . 422) (IDENTIFIER 417 . 421) (LT 416 . 417) (IDENTIFIER 408 . 416) (COMMA 406 . 407) (GT 405 . 406) (IDENTIFIER 404 . 405) (LT 403 . 404) (IDENTIFIER 393 . 403) (IMPLEMENTS 382 . 392) (RSHIFT 379 . 381) (IDENTIFIER 378 . 379) (LT 377 . 378) (IDENTIFIER 367 . 377) (EXTENDS 359 . 366) (IDENTIFIER 357 . 358) (LT 356 . 357) (PAREN_BLOCK 323 . 330) (IDENTIFIER 306 . 323))))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!main!java!datastructures!trees!binarysearchtrees!redblacktree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,35 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [41 65])
+            ("../../../../main/cpp/sorting/quicksort/quick_sort.h" include nil nil [66 128])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sorting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [135 143])
+                    ("" variable (:type ("QuickSortTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [144 158]))                  
+                :type "int")
+                nil [130 466]))          
+      :file "quick_sort_test.cpp"
+      :pointmax 467
+      :fsize 487
+      :lastmodtime '(24311 38667 713378 900000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( (".PHONY" function (:arguments ("build" "clean")) nil [1 21])
+            ("build" function (:arguments ("quick_sort_test.cpp")) nil [22 121])
+            ("clean" function (:arguments ("out")) nil [122 145]))          
+      :file "Makefile"
+      :pointmax 145
+      :fsize 144
+      :lastmodtime '(24308 11274 939710 700000)
+      :unmatched-syntax '((shell-command 134 . 144) (bol 133 . 133))))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!sorting!quicksort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

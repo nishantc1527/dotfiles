@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [37 44])
+                    ("longestDiverseString" function
+                       (:arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [80 86])
+                            ("b" variable (:type "int") (reparse-symbol arg-sub-list) [87 93])
+                            ("c" variable (:type "int") (reparse-symbol arg-sub-list) [94 100]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [47 132]))                  
+                :type "class")
+                nil [20 135]))          
+      :file "Solution.cpp"
+      :pointmax 136
+      :fsize 135
+      :lastmodtime '(24336 44844 986338 100000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!LongestHappyString!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

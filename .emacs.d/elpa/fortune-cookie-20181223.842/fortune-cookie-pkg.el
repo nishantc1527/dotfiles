@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "fortune-cookie" "20181223.842" "Print a fortune in your scratch buffer." 'nil :commit "6c1c08f5be83822c0b762872ab25e3dbee96f333" :keywords '("fortune" "cowsay" "scratch" "startup") :authors '(("Andrew Schwartzmeyer" . "andrew@schwartzmeyer.com")) :maintainer '("Andrew Schwartzmeyer" . "andrew@schwartzmeyer.com") :url "https://github.com/andschwa/fortune-cookie")

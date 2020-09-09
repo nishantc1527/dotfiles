@@ -1,0 +1,39 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("all" function (:arguments ("build" "run" "clean")) nil [1 22])
+            (".PHONY" function (:arguments ("all")) nil [22 34])
+            ("build" function (:arguments ("max_heap_test.cpp")) nil [35 177])
+            ("valgrind" function (:arguments ("out")) nil [178 349])
+            ("run" function nil nil [350 362])
+            ("clean" function (:arguments ("out")) nil [363 386]))          
+      :file "Makefile"
+      :pointmax 386
+      :fsize 385
+      :lastmodtime '(24311 34906 257372 100000)
+      :unmatched-syntax '((shell-command 375 . 385) (bol 374 . 374)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [1 25])
+            ("main/cpp/datastructures/trees/heap/max_heap.h" include nil nil [27 83])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("HeapTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90 99])
+                    ("" variable (:type ("MaxHeap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [100 108]))                  
+                :type "int")
+                nil [85 606]))          
+      :file "max_heap_test.cpp"
+      :pointmax 607
+      :fsize 606
+      :lastmodtime '(24311 43779 848065 400000)
+      :unmatched-syntax nil))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!datastructures!trees!heap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

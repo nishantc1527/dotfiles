@@ -1,0 +1,28 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [39 46])
+                    ("reverseBits" function
+                       (:arguments 
+                          ( ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [74 89]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [49 232]))                  
+                :type "class")
+                nil [22 235])
+            ("main" function (:type "int") nil [237 361]))          
+      :file "Solution.cpp"
+      :pointmax 362
+      :fsize 361
+      :lastmodtime '(24331 32038 533077 800000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!ReverseBits!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

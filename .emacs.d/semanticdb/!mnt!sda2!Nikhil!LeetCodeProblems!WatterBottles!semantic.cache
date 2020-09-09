@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [18 25])
+                    ("numWaterBottles" function
+                       (:arguments 
+                          ( ("numBottles" variable (:type "int") (reparse-symbol arg-sub-list) [48 63])
+                            ("numExchange" variable (:type "int") (reparse-symbol arg-sub-list) [64 80]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [28 295]))                  
+                :type "class")
+                nil [1 298]))          
+      :file "Solution.cpp"
+      :pointmax 299
+      :fsize 298
+      :lastmodtime '(24339 57008 235417 300000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!WatterBottles!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

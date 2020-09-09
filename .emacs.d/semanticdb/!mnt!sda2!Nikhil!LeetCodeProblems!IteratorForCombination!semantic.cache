@@ -1,0 +1,39 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("vector" include (:system-flag t) nil [19 36])
+            ("CombinationIterator" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [66 74])
+                    ("i" variable (:type "unsigned int") (reparse-symbol classsubparts) [77 92])
+                    ("str" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [95 111])
+                    ("combos" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [114 146])
+                    ("public" label nil (reparse-symbol classsubparts) [150 157])
+                    ("CombinationIterator" function
+                       (:arguments 
+                          ( ("str" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [180 196])
+                            ("len" variable (:type "int") (reparse-symbol arg-sub-list) [197 205]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [160 216])
+                    ("next" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [222 251])
+                    ("hasNext" function (:type "bool") (reparse-symbol classsubparts) [259 286]))                  
+                :type "class")
+                nil [38 289]))          
+      :file "Solution.cpp"
+      :pointmax 290
+      :fsize 291
+      :lastmodtime '(24338 8587 849234 800000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!IteratorForCombination!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

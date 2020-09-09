@@ -1,0 +1,29 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("../Nodes.h" include nil nil [20 41])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [60 67])
+                    ("recoverFromPreorder" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("in" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [100 115]))                          
+                        :type ("TreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [70 126]))                  
+                :type "class")
+                nil [43 129]))          
+      :file "Solution.cpp"
+      :pointmax 130
+      :fsize 129
+      :lastmodtime '(24335 24597 974470 100000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!RecoverTreeFromPreorderTraversal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

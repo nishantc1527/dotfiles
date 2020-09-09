@@ -1,0 +1,145 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("GraphMaker.h" include nil nil [1 24])
+            ("makeGraphAdjList" function
+               (:arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [71 77])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [78 113]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::list" type (:template-specifier 
+                            ( ("int" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [26 282])
+            ("makeGraphAdjListWeighted" function
+               (:arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [356 362])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("int" type nil nil nil))                                    ) nil nil)
+                                  ("double" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [363 417]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::list" type (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("double" type nil nil nil))                                ) nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [284 670])
+            ("makeGraphAdjMat" function
+               (:arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [718 724])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [725 760]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type (:template-specifier 
+                            ( ("int" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [672 922]))          
+      :file "GraphMaker.cpp"
+      :pointmax 923
+      :fsize 922
+      :lastmodtime '(24302 31145 521748 500000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("GRAPH_MAKER" variable (:constant-flag t) nil [29 40])
+            ("vector" include (:system-flag t) nil [42 59])
+            ("list" include (:system-flag t) nil [60 75])
+            ("makeGraphAdjList" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [122 128])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [129 164]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::list" type (:template-specifier 
+                            ( ("int" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [77 165])
+            ("makeGraphAdjListWeighted" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [239 245])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("int" type nil nil nil))                                    ) nil nil)
+                                  ("double" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [246 300]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::list" type (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("double" type nil nil nil))                                ) nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [167 301])
+            ("makeGraphAdjMat" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("V" variable (:type "int") (reparse-symbol arg-sub-list) [349 355])
+                    ("E" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::pair" type (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("int" type nil nil nil))                                ) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [356 391]))                  
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::vector" type (:template-specifier 
+                            ( ("int" type nil nil nil))                            ) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [303 392]))          
+      :file "GraphMaker.h"
+      :pointmax 401
+      :fsize 400
+      :lastmodtime '(24302 31100 629930 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GRAPH_MAKER")
+          )
+))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!main!cpp!graphtheory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

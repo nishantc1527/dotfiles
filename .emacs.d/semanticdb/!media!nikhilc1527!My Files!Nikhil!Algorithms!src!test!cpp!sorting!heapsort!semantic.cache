@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [41 61])
+            ("gtest/gtest.h" include (:system-flag t) nil [62 86])
+            ("../../../../main/cpp/sorting/heapsort/heap_sort.hpp" include nil nil [88 150])
+            ("../../../../main/cpp/my_utils.h" include nil nil [151 193])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sorting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [200 208])
+                    ("" variable (:type ("HeapSortTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [209 222]))                  
+                :type "int")
+                nil [195 456]))          
+      :file "heap_sort_test.cpp"
+      :pointmax 457
+      :fsize 476
+      :lastmodtime '(24311 38136 796076 100000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("all" function (:arguments ("build" "run" "clean")) nil [1 22])
+            (".PHONY" function (:arguments ("all")) nil [22 34])
+            ("build" function (:arguments ("heap_sort_test.cpp")) nil [35 211])
+            ("valgrind" function (:arguments ("out")) nil [212 383])
+            ("run" function nil nil [384 396])
+            ("clean" function (:arguments ("out")) nil [397 420]))          
+      :file "Makefile"
+      :pointmax 420
+      :fsize 419
+      :lastmodtime '(24311 38388 242411 0)
+      :unmatched-syntax nil))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!sorting!heapsort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

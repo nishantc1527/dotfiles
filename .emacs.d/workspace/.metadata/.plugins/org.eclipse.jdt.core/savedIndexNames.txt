@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/nikhilc1527/.emacs.d/workspace/.metadata/.plugins/org.eclipse.jdt.core
+3842426239.index
+308767683.index
+3949366491.index

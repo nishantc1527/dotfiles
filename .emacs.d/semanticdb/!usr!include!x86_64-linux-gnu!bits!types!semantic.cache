@@ -1,0 +1,344 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__wint_t_defined" variable (:constant-flag t) nil [34 50])
+            ("_WINT_T" variable (:constant-flag t) nil [384 391])
+            ("__WINT_TYPE__" variable (:constant-flag t) nil [677 690])
+            ("wint_t" type
+               (:typedef ("unsigned int")
+                :type "typedef")
+                nil [712 741]))          
+      :file "wint_t.h"
+      :pointmax 797
+      :fsize 796
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__WINT_TYPE__" . ((UNSIGNED "unsigned" 691 . 699) (INT "int" 700 . 703)))
+          ("__wint_t_defined" . ((number "1" 51 . 52)))
+          ("_WINT_T" . ((number "1" 392 . 393)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__mbstate_t_defined" variable (:constant-flag t) nil [37 56])
+            ("bits/types/__mbstate_t.h" include (:system-flag t) nil [60 95])
+            ("mbstate_t" type
+               (:typedef ("__mbstate_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [97 127]))          
+      :file "mbstate_t.h"
+      :pointmax 136
+      :fsize 135
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__mbstate_t_defined" . ((number "1" 57 . 58)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("____FILE_defined" variable (:constant-flag t) nil [34 50])
+            ("_IO_FILE" type
+               (:prototype t
+                :type "struct")
+                nil [54 70])
+            ("__FILE" type
+               (:typedef ("_IO_FILE" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [71 102]))          
+      :file "__FILE.h"
+      :pointmax 111
+      :fsize 110
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("____FILE_defined" . ((number "1" 51 . 52)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__FILE_defined" variable (:constant-flag t) nil [32 46])
+            ("_IO_FILE" type
+               (:prototype t
+                :type "struct")
+                nil [50 66])
+            ("FILE" type
+               (:typedef ("_IO_FILE" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [143 172]))          
+      :file "FILE.h"
+      :pointmax 181
+      :fsize 180
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__FILE_defined" . ((number "1" 47 . 48)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BITS_TYPES_LOCALE_T_H" variable (:constant-flag t) nil [857 879])
+            ("bits/types/__locale_t.h" include (:system-flag t) nil [883 917])
+            ("locale_t" type
+               (:typedef ("__locale_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [919 947]))          
+      :file "locale_t.h"
+      :pointmax 984
+      :fsize 983
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BITS_TYPES_LOCALE_T_H" . ((number "1" 880 . 881)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("____mbstate_t_defined" variable (:constant-flag t) nil [39 60])
+            ("__WINT_TYPE__" variable (:constant-flag t) nil [346 359])
+            ("__mbstate_t" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("__count" variable (:type "int") (reparse-symbol classsubparts) [437 449])
+                          ("__value" variable (:type ("" type
+                               (:members 
+                                  ( ("__wch" variable (:type "unsigned int") (reparse-symbol classsubparts) [466 486])
+                                    ("__wchb" variable
+                                       (:dereference 1
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [491 506]))                                  
+                                :type "union")
+                                nil nil)) (reparse-symbol classsubparts) [452 519]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [418 556]))          
+      :file "__mbstate_t.h"
+      :pointmax 565
+      :fsize 564
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("____mbstate_t_defined" . ((number "1" 61 . 62)))
+          ("__WINT_TYPE__" . ((UNSIGNED "unsigned" 360 . 368) (INT "int" 369 . 372)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BITS_TYPES___LOCALE_T_H" variable (:constant-flag t) nil [949 973])
+            ("__locale_struct" type
+               (:members 
+                  ( ("__locales" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("__locale_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1313 1349])
+                    ("__ctype_b" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned short int")
+                        (reparse-symbol classsubparts) [1452 1488])
+                    ("__ctype_tolower" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1491 1518])
+                    ("__ctype_toupper" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1521 1548])
+                    ("__names" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1612 1636]))                  
+                :type "struct")
+                nil [1226 1639])
+            ("__locale_t" type
+               (:typedef ("__locale_struct" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :pointer 1
+                :type "typedef")
+                nil [1641 1684]))          
+      :file "__locale_t.h"
+      :pointmax 1723
+      :fsize 1722
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BITS_TYPES___LOCALE_T_H" . ((number "1" 974 . 975)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_STRUCT_TIMESPEC" variable (:constant-flag t) nil [93 109])
+            ("bits/types.h" include (:system-flag t) nil [113 136])
+            ("bits/endian.h" include (:system-flag t) nil [137 161])
+            ("timespec" type
+               (:members 
+                  ( ("tv_sec" variable (:type ("__time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [308 324])
+                    ("tv_nsec" variable (:type "long int") (reparse-symbol classsubparts) [579 596]))                  
+                :type "struct")
+                nil [288 720]))          
+      :file "struct_timespec.h"
+      :pointmax 729
+      :fsize 728
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax '((punctuation 549 . 550) (number 547 . 549) (punctuation 545 . 546) (INT 542 . 545))
+      :lexical-table 
+        '(("_STRUCT_TIMESPEC" . ((number "1" 110 . 111)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__error_t_defined" variable (:constant-flag t) nil [845 862])
+            ("error_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [866 886]))          
+      :file "error_t.h"
+      :pointmax 895
+      :fsize 894
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__error_t_defined" . ((number "1" 863 . 864)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__time_t_defined" variable (:constant-flag t) nil [34 50])
+            ("bits/types.h" include (:system-flag t) nil [54 77])
+            ("time_t" type
+               (:typedef ("__time_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [106 130]))          
+      :file "time_t.h"
+      :pointmax 139
+      :fsize 138
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__time_t_defined" . ((number "1" 51 . 52)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__clock_t_defined" variable (:constant-flag t) nil [35 52])
+            ("bits/types.h" include (:system-flag t) nil [56 79])
+            ("clock_t" type
+               (:typedef ("__clock_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [109 135]))          
+      :file "clock_t.h"
+      :pointmax 144
+      :fsize 143
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__clock_t_defined" . ((number "1" 53 . 54)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__struct_tm_defined" variable (:constant-flag t) nil [37 56])
+            ("bits/types.h" include (:system-flag t) nil [60 83])
+            ("tm" type
+               (:members 
+                  ( ("tm_sec" variable (:type "int") (reparse-symbol classsubparts) [142 153])
+                    ("tm_min" variable (:type "int") (reparse-symbol classsubparts) [196 207])
+                    ("tm_hour" variable (:type "int") (reparse-symbol classsubparts) [234 246])
+                    ("tm_mday" variable (:type "int") (reparse-symbol classsubparts) [271 283])
+                    ("tm_mon" variable (:type "int") (reparse-symbol classsubparts) [307 318])
+                    ("tm_year" variable (:type "int") (reparse-symbol classsubparts) [343 355])
+                    ("tm_wday" variable (:type "int") (reparse-symbol classsubparts) [380 392])
+                    ("tm_yday" variable (:type "int") (reparse-symbol classsubparts) [422 434])
+                    ("tm_isdst" variable (:type "int") (reparse-symbol classsubparts) [466 479])
+                    ("tm_gmtoff" variable (:type "long int") (reparse-symbol classsubparts) [524 543])
+                    ("tm_zone" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [575 595]))                  
+                :type "struct")
+                nil [128 752]))          
+      :file "struct_tm.h"
+      :pointmax 761
+      :fsize 760
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__struct_tm_defined" . ((number "1" 57 . 58)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_BITS_TYPES_STRUCT_SCHED_PARAM" variable (:constant-flag t) nil [887 917])
+            ("sched_param" type
+               (:members 
+                  ( ("sched_priority" variable (:type "int") (reparse-symbol classsubparts) [1005 1024]))                  
+                :type "struct")
+                nil [982 1027]))          
+      :file "struct_sched_param.h"
+      :pointmax 1074
+      :fsize 1073
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_BITS_TYPES_STRUCT_SCHED_PARAM" . ((number "1" 918 . 919)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__timeval_defined" variable (:constant-flag t) nil [35 52])
+            ("bits/types.h" include (:system-flag t) nil [56 79])
+            ("timeval" type
+               (:members 
+                  ( ("tv_sec" variable (:type ("__time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [198 214])
+                    ("tv_usec" variable (:type ("__suseconds_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [234 256]))                  
+                :type "struct")
+                nil [179 280]))          
+      :file "struct_timeval.h"
+      :pointmax 288
+      :fsize 287
+      :lastmodtime '(24214 3660 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__timeval_defined" . ((number "1" 53 . 54)))
+          )
+))
+  :file "!usr!include!x86_64-linux-gnu!bits!types!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

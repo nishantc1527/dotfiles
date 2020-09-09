@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("stack" include (:system-flag t) nil [19 35])
+            ("unordered_set" include (:system-flag t) nil [36 60])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [79 86])
+                    ("avoidFlood" function
+                       (:arguments 
+                          ( ("rains" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [117 141]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [89 569]))                  
+                :type "class")
+                nil [62 572]))          
+      :file "Solution.cpp"
+      :pointmax 573
+      :fsize 572
+      :lastmodtime '(24346 17759 957308 0)
+      :unmatched-syntax nil))
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!AvoidFloodInTheCity!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include nil nil [41 65])
+            ("../../../../main/cpp/sorting/selectionsort/selection_sort.h" include nil nil [66 136])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sorting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [143 151])
+                    ("" variable (:type ("SelectionSortTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 170]))                  
+                :type "int")
+                nil [138 482]))          
+      :file "selection_sort_test.cpp"
+      :pointmax 482
+      :fsize 501
+      :lastmodtime '(24288 7261 924590 900000)
+      :unmatched-syntax nil))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!sorting!selectionsort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

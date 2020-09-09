@@ -1,0 +1,149 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags 
+        '( ("java.util.*" include nil nil [1 20])
+            ("Solution" type
+               (:members 
+                  ( ("twoSum" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("nums" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol formal_parameters) [63 73])
+                            ("target" variable (:type "int") (reparse-symbol formal_parameters) [75 85]))                          
+                        :type "int[]")
+                        (reparse-symbol class_member_declaration) [43 425])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [455 468]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [431 679]))                  
+                :type "class")
+                nil [22 681]))          
+      :file "Solution.java"
+      :pointmax 682
+      :fsize 681
+      :lastmodtime '(24348 40112 218565 700000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "Solution.js"
+      :pointmax 357
+      :fsize 356
+      :lastmodtime '(24345 14003 916037 900000)
+      :unmatched-syntax '((VARIABLE 339 . 346) (PAREN_BLOCK 350 . 355) (SEMICOLON 304 . 305) (VARIABLE 307 . 310) (VARIABLE 311 . 314) (PAREN_BLOCK 323 . 337) (FUNCTION 96 . 104) (PAREN_BLOCK 104 . 118)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Solution" type
+               (:members 
+                  ( ("twoSum" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32 36])
+                            ("nums" variable nil (reparse-symbol function_parameters) [38 42])
+                            ("target" variable nil (reparse-symbol function_parameters) [44 50]))                          )
+                        (reparse-symbol indented_block_body) [21 211]))                  
+                :type "class")
+                nil [1 217])
+            ("print" code nil nil [223 274]))          
+      :file "Solution.py"
+      :pointmax 275
+      :fsize 263
+      :lastmodtime '(24348 57266 910560 900000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode php-mode
+      :tags 
+        '( ("$s" variable
+               (:default-value "new Solution()"
+                :type ("Solution" type
+                     (:prototype t
+                      :type "class")
+                      nil nil))
+                nil [7 476])
+            ("Solution" type
+               (:members 
+                  ( ("twoSum" function
+                       (:arguments 
+                          ( ("" variable (:type ("$nums" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [146 152])
+                            ("" variable (:type ("$target" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [153 161]))                          
+                        :type ("function" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [130 452]))                  
+                :type "class")
+                nil [7 476])
+            ("$input" variable
+               (:default-value "[5, 1, 6]"
+                :type "int")
+                nil [477 496])
+            ("$res" variable
+               (:default-value "$s->twoSum($input, 6)"
+                :type "int")
+                nil [497 526]))          
+      :file "Solution.php"
+      :pointmax 567
+      :fsize 566
+      :lastmodtime '(24345 13372 566044 400000)
+      :unmatched-syntax '((punctuation 565 . 566) (punctuation 564 . 565) (punctuation 562 . 563) (string 558 . 562) (punctuation 556 . 557) (semantic-list 552 . 555) (symbol 548 . 552) (punctuation 546 . 547) (string 543 . 546) (punctuation 541 . 542) (semantic-list 537 . 540) (symbol 533 . 537) (symbol 527 . 532) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 562 . 563) (string 558 . 562) (punctuation 556 . 557) (semantic-list 552 . 555) (symbol 548 . 552) (punctuation 546 . 547) (string 543 . 546) (punctuation 541 . 542) (semantic-list 537 . 540) (symbol 533 . 537) (symbol 527 . 532) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 556 . 557) (string 552 . 556) (punctuation 550 . 551) (semantic-list 546 . 549) (symbol 542 . 546) (punctuation 540 . 541) (string 537 . 540) (punctuation 535 . 536) (semantic-list 531 . 534) (symbol 527 . 531) (symbol 521 . 526) (punctuation 565 . 566) (punctuation 564 . 565) (punctuation 562 . 563) (string 558 . 562) (punctuation 556 . 557) (semantic-list 552 . 555) (symbol 548 . 552) (punctuation 546 . 547) (string 543 . 546) (punctuation 541 . 542) (semantic-list 537 . 540) (symbol 533 . 537) (symbol 527 . 532) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 564 . 565) (punctuation 563 . 564) (punctuation 561 . 562) (string 557 . 561) (punctuation 555 . 556) (semantic-list 551 . 554) (symbol 547 . 551) (punctuation 545 . 546) (string 542 . 545) (punctuation 540 . 541) (semantic-list 536 . 539) (symbol 532 . 536) (symbol 526 . 531) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 564 . 565) (punctuation 563 . 564) (punctuation 561 . 562) (string 557 . 561) (punctuation 555 . 556) (semantic-list 551 . 554) (symbol 547 . 551) (punctuation 545 . 546) (string 542 . 545) (punctuation 540 . 541) (semantic-list 536 . 539) (symbol 532 . 536) (symbol 526 . 531) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 561 . 562) (string 557 . 561) (punctuation 555 . 556) (semantic-list 551 . 554) (symbol 547 . 551) (punctuation 545 . 546) (string 542 . 545) (punctuation 540 . 541) (semantic-list 536 . 539) (symbol 532 . 536) (symbol 526 . 531) (punctuation 552 . 553) (punctuation 551 . 552) (punctuation 540 . 541) (semantic-list 536 . 539) (symbol 532 . 536) (symbol 526 . 531) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 540 . 541) (punctuation 558 . 559) (punctuation 557 . 558) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 551 . 552) (punctuation 550 . 551) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2) (punctuation 550 . 551) (punctuation 549 . 550) (symbol 3 . 6) (punctuation 2 . 3) (punctuation 1 . 2)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("Solution" type
+               (:members 
+                  ( ("twoSum" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [32 36])
+                            ("nums" variable nil (reparse-symbol function_parameters) [38 42])
+                            ("target" variable nil (reparse-symbol function_parameters) [44 50]))                          
+                        :documentation "
+        My name is jeff
+        ")
+                        (reparse-symbol indented_block_body) [21 259]))                  
+                :type "class")
+                nil [1 259])
+            ("print" code nil nil [260 311]))          
+      :file "Solution.py~"
+      :pointmax 312
+      :fsize 274
+      :lastmodtime '(24348 57225 913820 300000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode php-mode
+      :tags nil
+      :file "Solution.php~"
+      :pointmax 174
+      :fsize 173
+      :lastmodtime '(24345 10296 133596 200000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode java-mode
+      :tags nil
+      :file "Solution.java~"
+      :pointmax 682
+      :fsize 681
+      :lastmodtime '(24347 57031 232569 400000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "Solution.js~"
+      :pointmax 358
+      :fsize 357
+      :lastmodtime '(24345 2265 868926 100000)
+      :unmatched-syntax '((VARIABLE 340 . 347) (PAREN_BLOCK 351 . 356) (SEMICOLON 305 . 306) (VARIABLE 308 . 311) (VARIABLE 312 . 315) (PAREN_BLOCK 324 . 338) (FUNCTION 96 . 104) (PAREN_BLOCK 104 . 118)))
+)
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!TwoSum!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

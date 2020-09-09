@@ -1,0 +1,47 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("array" include (:system-flag t) nil [19 35])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [74 81])
+                    ("leastInterval" function
+                       (:arguments 
+                          ( ("tasks" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("char" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [102 127])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [128 134]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [84 501]))                  
+                :type "class")
+                nil [57 504])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [515 524])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [525 538]))                  
+                :type "int")
+                nil [506 791]))          
+      :file "Solution.cpp"
+      :pointmax 1094
+      :fsize 1093
+      :lastmodtime '(24352 26902 168637 500000)
+      :unmatched-syntax nil))
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!TaskScheduler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

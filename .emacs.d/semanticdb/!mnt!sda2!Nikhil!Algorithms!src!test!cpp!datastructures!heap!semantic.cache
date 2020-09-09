@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [1 25])
+            ("main/cpp/datastructures/heap/max_heap.h" include nil nil [27 77])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("HeapTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84 93])
+                    ("" variable (:type ("MaxHeap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 102]))                  
+                :type "int")
+                nil [79 600]))          
+      :file "max_heap_test.cpp"
+      :pointmax 601
+      :fsize 600
+      :lastmodtime '(24331 31501 109534 600000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!test!cpp!datastructures!heap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

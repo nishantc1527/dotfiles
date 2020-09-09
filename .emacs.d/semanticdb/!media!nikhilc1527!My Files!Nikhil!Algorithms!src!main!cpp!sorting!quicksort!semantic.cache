@@ -1,0 +1,90 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iterator" include (:system-flag t) nil [15 34])
+            ("algorithm" include (:system-flag t) nil [35 55])
+            ("iostream" include (:system-flag t) nil [56 75])
+            ("typeinfo" include (:system-flag t) nil [76 95])
+            ("quick_sort" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vector" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [113 138])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [139 148])
+                    ("right" variable (:type "int") (reparse-symbol arg-sub-list) [149 159]))                  
+                :type "void")
+                nil [97 160])
+            ("partition" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vector" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [176 201])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [202 211])
+                    ("right" variable (:type "int") (reparse-symbol arg-sub-list) [212 222]))                  
+                :type "int")
+                nil [162 223])
+            ("quick_sort" function
+               (:arguments 
+                  ( ("vector" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [241 266]))                  
+                :type "void")
+                nil [225 310])
+            ("quick_sort" function
+               (:arguments 
+                  ( ("vector" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [328 353])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [354 363])
+                    ("right" variable (:type "int") (reparse-symbol arg-sub-list) [364 374]))                  
+                :type "void")
+                nil [312 561])
+            ("partition" function
+               (:arguments 
+                  ( ("vector" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [577 602])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [603 612])
+                    ("right" variable (:type "int") (reparse-symbol arg-sub-list) [613 623]))                  
+                :type "int")
+                nil [563 926]))          
+      :file "quick_sort.h"
+      :pointmax 927
+      :fsize 926
+      :lastmodtime '(24288 7261 756438 300000)
+      :unmatched-syntax '((symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2))))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!main!cpp!sorting!quicksort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

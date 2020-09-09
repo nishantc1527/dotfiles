@@ -1,0 +1,39 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("array" include (:system-flag t) nil [39 55])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [74 81])
+                    ("maxNumberOfBalloons" function
+                       (:arguments 
+                          ( ("text" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108 125]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [84 605]))                  
+                :type "class")
+                nil [57 608])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [620 629])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [630 643]))                  
+                :type "int")
+                nil [611 804]))          
+      :file "Solution.cpp"
+      :pointmax 805
+      :fsize 804
+      :lastmodtime '(24342 24621 221758 500000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!MaximumNumberOfBalloons!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

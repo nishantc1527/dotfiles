@@ -1,0 +1,52 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("iostream" include (:system-flag t) nil [19 38])
+            ("queue" include (:system-flag t) nil [39 55])
+            ("functional" include (:system-flag t) nil [56 77])
+            ("deque" include (:system-flag t) nil [78 94])
+            ("../Nodes.h" include nil nil [96 117])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [136 143])
+                    ("isSubPath" function
+                       (:arguments 
+                          ( ("head" variable
+                               (:pointer 1
+                                :type ("ListNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [161 176])
+                            ("root" variable
+                               (:pointer 1
+                                :type ("TreeNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [177 192]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [146 1305])
+                    ("dfs" function
+                       (:arguments 
+                          ( ("head" variable
+                               (:pointer 1
+                                :type ("ListNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1318 1333])
+                            ("root" variable
+                               (:pointer 1
+                                :type ("TreeNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1334 1349]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1309 1542]))                  
+                :type "class")
+                nil [119 1545])
+            ("main" function (:type "int") nil [1547 1792]))          
+      :file "Solution.cpp"
+      :pointmax 1793
+      :fsize 1792
+      :lastmodtime '(24333 22070 58519 600000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!LinkedListInBinaryTree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

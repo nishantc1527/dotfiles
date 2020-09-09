@@ -1,0 +1,81 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("iostream" include (:system-flag t) nil [19 38])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [57 64])
+                    ("sort" function
+                       (:arguments 
+                          ( ("vis" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [77 100])
+                            ("globVis" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("bool" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [101 128])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [129 135])
+                            ("pres" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [136 172])
+                            ("i" variable (:type "int") (reparse-symbol arg-sub-list) [173 179])
+                            ("res" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [180 202]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [67 472])
+                    ("findOrder" function
+                       (:arguments 
+                          ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [503 509])
+                            ("pres" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            ) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [510 546]))                          
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [476 907]))                  
+                :type "class")
+                nil [40 911])
+            ("main" function (:type "int") nil [913 1129]))          
+      :file "LeetcodeChallengeForToday.cpp"
+      :pointmax 1131
+      :fsize 1130
+      :lastmodtime '(24339 52566)
+      :unmatched-syntax nil))
+  :file "!ssh:nchatterjee@192.168.1.197:!home!nchatterjee!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

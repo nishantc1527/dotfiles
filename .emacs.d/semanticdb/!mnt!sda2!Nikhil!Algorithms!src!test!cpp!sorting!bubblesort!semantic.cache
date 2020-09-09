@@ -1,0 +1,25 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [41 65])
+            ("main/cpp/sorting/bubblesort/bubble_sort.h" include nil nil [67 119])
+            ("main/cpp/my_utils.h" include nil nil [120 150])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sorting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [157 165])
+                    ("" variable (:type ("BubbleSortTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166 181]))                  
+                :type "int")
+                nil [152 374]))          
+      :file "bubble_sort_test.cpp"
+      :pointmax 375
+      :fsize 391
+      :lastmodtime '(24317 14387 602022 400000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!test!cpp!sorting!bubblesort!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

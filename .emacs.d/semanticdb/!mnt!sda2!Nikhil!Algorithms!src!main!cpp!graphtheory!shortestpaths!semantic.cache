@@ -1,0 +1,87 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("DIJKSTRA" variable (:constant-flag t) nil [26 34])
+            ("vector" include (:system-flag t) nil [36 53])
+            ("algorithm" include (:system-flag t) nil [54 74])
+            ("list" include (:system-flag t) nil [75 90])
+            ("Dijkstra" type
+               (:members 
+                  ( ("vertex" type
+                       (:members 
+                          ( ("id" variable (:type "int") (reparse-symbol classsubparts) [131 138])
+                            ("pred" variable (:type "int") (reparse-symbol classsubparts) [143 152])
+                            ("d" variable (:type "double") (reparse-symbol classsubparts) [157 166]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [111 171])
+                    ("returnType" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("int" type nil nil nil)
+                                      ("double" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [254 309])
+                    ("inputAdjListType" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::list" type (:template-specifier 
+                                    ( ("std::pair" type (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("double" type nil nil nil))                                        ) nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [312 384])
+                    ("adjListType" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::list" type (:template-specifier 
+                                    ( ("std::pair" type (:template-specifier 
+                                        ( ("vertex" type nil nil nil)
+                                          ("double" type nil nil nil))                                        ) nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [387 457])
+                    ("vertListType" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("vertex" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [460 501])
+                    ("edgeListType" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type (:template-specifier 
+                                    ( ("std::pair" type (:template-specifier 
+                                        ( ("vertex" type (:pointer 1) nil nil)
+                                          ("vertex" type (:pointer 1) nil nil))                                        ) nil nil)
+                                      ("double" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [504 585]))                  
+                :type "class")
+                nil [92 592]))          
+      :file "Dijkstra.h"
+      :pointmax 601
+      :fsize 600
+      :lastmodtime '(24324 53796 230791 500000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DIJKSTRA")
+          )
+))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!main!cpp!graphtheory!shortestpaths!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

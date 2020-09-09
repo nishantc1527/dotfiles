@@ -1,0 +1,102 @@
+;;; -*- coding: utf-8 -*-
+(("/etc/default/grub" . 378)
+ ("/etc/default/"
+  (dired-filename . "/etc/default/acpid"))
+ ("/"
+  (dired-filename . "/bin"))
+ ("/home/nikhilc1527/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d"))
+ ("/etc/"
+  (dired-filename . "/etc/acpi"))
+ ("/home/nikhilc1527/Music/" . 196)
+ ("/home/nikhilc1527/MyFiles/"
+  (dired-filename . "/home/nikhilc1527/MyFiles/$RECYCLE.BIN"))
+ ("/home/nikhilc1527/.bashrc" . 3695)
+ ("/usr/include/c++/10/string_view" . 3645)
+ ("/home/nikhilc1527/.emacs.d/custom-set.el" . 2)
+ ("/usr/share/bash-completion/"
+  (dired-filename . "/usr/share/bash-completion/bash_completion"))
+ ("/usr/share/"
+  (dired-filename . "/usr/share/aclocal"))
+ ("/usr/"
+  (dired-filename . "/usr/bin"))
+ ("/home/nikhilc1527/.rbenv/"
+  (dired-filename . "/home/nikhilc1527/.rbenv/shims"))
+ ("/usr/include/c++/9/bits/basic_string.h" . 16700)
+ ("/usr/include/c++/9/ext/aligned_buffer.h" . 3739)
+ ("/usr/include/c++/9/bits/stl_vector.h" . 29735)
+ ("/mnt/My Files/Nikhil/LeetCodeProblems/Nodes.h" . 1873)
+ ("/tmp/"
+  (dired-filename . "/tmp/babel-ArE1EL"))
+ ("/home/nikhilc1527/.emacs.d/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/.."))
+ ("/home/nikhilc1527/.emacs.d/elpa/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/ace-window-20200606.1259"))
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets"))
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/cc-mode/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/cc-mode/case"))
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/antlr-mode"))
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/c-lang-common/main" . 49)
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/c++-mode/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/c++-mode/acl"))
+ ("/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/c-lang-common/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets/c-lang-common/fopen"))
+ ("/home/nikhilc1527/.emacs.d/myinit.org" . 2878)
+ ("/home/nikhilc1527/.emacs.d/elpa/xwidgete-20171118.2116/xwidgete-autoloads.el" . 421)
+ ("/home/nikhilc1527/.emacs.d/elpa/orgalist-1.12/orgalist-autoloads.el" . 1701)
+ ("/home/nikhilc1527/.emacs.d/elpa/latex-pretty-symbols-20151112.1044/latex-pretty-symbols-autoloads.el" . 496)
+ ("/usr/include/c++/10/map" . 3469)
+ ("/usr/include/c++/10/iostream" . 1672)
+ ("/usr/include/c++/10/bits/stl_algo.h" . 172391)
+ ("/home/nikhilc1527/.emacs.d/.cache/treemacs-persist" . 79)
+ ("/home/nikhilc1527/.emacs.d/programminginit.org" . 1818)
+ ("/home/nikhilc1527/.emacs.d/elpa/company-emoji-20200612.1902/company-emoji-autoloads.el" . 1403)
+ ("/home/nikhilc1527/.emacs.d/workspace/.cache/java.util.Scanner.java" . 4347)
+ ("/home/nikhilc1527/.emacs.d/elpa/lsp-ui-20200718.1035/lsp-ui-autoloads.el" . 2058)
+ ("/home/nikhilc1527/.emacs.d/elpa/irony-20200130.849/irony.el" . 33057)
+ ("/usr/lib/cmake/clang-10/ClangConfig.cmake" . 2466)
+ ("/usr/lib/cmake/clang-10/"
+  (dired-filename . "/usr/lib/cmake/clang-10/ClangConfig.cmake"))
+ ("/usr/lib/cmake/"
+  (dired-filename . "/usr/lib/cmake/clang-10"))
+ ("/home/nikhilc1527/.emacs" . 380)
+ ("/home/nikhilc1527/.emacs.d/elpa/flycheck-20200610.1809/flycheck-autoloads.el" . 11085)
+ ("/home/nikhilc1527/.emacs.d/elpa/auto-complete-20170125.245/auto-complete-autoloads.el" . 1924)
+ ("/home/nikhilc1527/.emacs.d/semanticdb/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/semanticdb/.."))
+ ("/home/nikhilc1527/.emacs.d/myinit.html" . 63521)
+ ("/home/nikhilc1527/.emacs.d/games/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/games/bubbles-default-2-10-10-scores"))
+ ("/home/nikhilc1527/.emacs.d/.python-environments/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/.python-environments/default"))
+ ("/home/nikhilc1527/.virtualenvs/"
+  (dired-filename . "/home/nikhilc1527/.virtualenvs/p3"))
+ ("/home/nikhilc1527/.emacs.d/elpa/dap-mode-20200725.1307/dap-mode-autoloads.el" . 7596)
+ ("/home/nikhilc1527/.emacs.d/elpa/bui-20200426.2219/bui-autoloads.el" . 1942)
+ ("/home/nikhilc1527/.emacs.d/elpa/lsp-treemacs-20200725.1143/lsp-treemacs-autoloads.el" . 2314)
+ ("/usr/local/include/" . 164)
+ ("/usr/include/"
+  (dired-filename . "/usr/include/aio.h"))
+ ("/home/nikhilc1527/.emacs.d/eshell/"
+  (dired-filename . "/home/nikhilc1527/.emacs.d/eshell/history"))
+ ("/home/nikhilc1527/.emacs.d/elpa/elpy-20200527.2021/elpy-autoloads.el" . 2292)
+ ("/home/nikhilc1527/.emacs.d/elpa/highlight-indentation-20181204.839/highlight-indentation-autoloads.el" . 1107)
+ ("/home/nikhilc1527/.emacs.d/elpa/pyvenv-20191202.1039/pyvenv-autoloads.el" . 2129)
+ ("/home/nikhilc1527/.emacs.d/elpa/try-20181204.236/try-autoloads.el" . 725)
+ ("/home/nikhilc1527/.emacs.d/elpa/ox-reveal-20200703.2313/ox-reveal-autoloads.el" . 755)
+ ("/home/nikhilc1527/.emacs.d/elpa/epc-20140610.534/epc-autoloads.el" . 634)
+ ("/home/nikhilc1527/.emacs.d/elpa/concurrent-20161229.330/concurrent-autoloads.el" . 414)
+ ("/home/nikhilc1527/.emacs.d/elpa/ctable-20171006.11/ctable-autoloads.el" . 396)
+ ("/home/nikhilc1527/.emacs.d/elpa/python-environment-20150310.853/python-environment-autoloads.el" . 830)
+ ("/home/nikhilc1527/.emacs.d/elpa/deferred-20170901.1330/deferred-autoloads.el" . 410)
+ ("/mnt/My Files/Nikhil/LeetCodeProblems/AvoidFloodInTheCity/Solution.cpp" . 68)
+ ("/home/nikhilc1527/.emacs.d/elpa/php-mode-20200507.1755/php-mode-autoloads.el" . 7476)
+ ("/home/nikhilc1527/.emacs.d/elpa/go-mode-20200425.1740/go-mode-autoloads.el" . 3386)
+ ("/home/nikhilc1527/Templates/" . 200)
+ ("/home/nikhilc1527/Desktop/" . 198)
+ ("/home/nikhilc1527/.rustup/"
+  (dired-filename . "/home/nikhilc1527/.rustup/downloads"))
+ ("/home/nikhilc1527/.emacs.d/elpa/which-key-20200721.1927/which-key-autoloads.el" . 6045)
+ ("/home/nikhilc1527/.emacs.d/elpa/htmlize-20191111.2130/htmlize-autoloads.el" . 2873))

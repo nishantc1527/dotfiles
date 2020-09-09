@@ -1,0 +1,126 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("MAX_HEAP" variable (:constant-flag t) nil [26 34])
+            ("vector" include (:system-flag t) nil [36 53])
+            ("algorithm" include (:system-flag t) nil [54 74])
+            ("exception" include (:system-flag t) nil [75 95])
+            ("concepts" include (:system-flag t) nil [96 115])
+            ("max_heap" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [156 164])
+                    ("heap" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [167 187])
+                    ("max_heap_size" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [190 216])
+                    ("parent" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [238 244]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [220 274])
+                    ("left" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [293 299]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [277 327])
+                    ("right" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [347 353]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [330 381])
+                    ("public" label nil (reparse-symbol classsubparts) [383 390])
+                    ("max_heap" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("initial_capacity" variable (:type "int") (reparse-symbol arg-sub-list) [402 423]))                          
+                        :type ("max_heap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [393 524])
+                    ("max_heap" function
+                       (:constructor-flag t
+                        :type ("max_heap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [528 588])
+                    ("build_max_heap" function
+                       (:arguments 
+                          ( ("array" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [612 640]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [592 797])
+                    ("max_heapify" function
+                       (:arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [818 824]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [801 1149])
+                    ("maximum" function (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1153 1190])
+                    ("size" function (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1194 1244])
+                    ("heap_underflow_execption" variable (:type ("heap_underflow_execption" type
+                         (:prototype t
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1248 1418])
+                    ("heap_underflow_execption" type
+                       (:superclasses 
+                          ( ("std::exception" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("what" function
+                               (:methodconst-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [1309 1388]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1248 1418])
+                    ("extract_max" function (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1421 1633])
+                    ("increase_key" function
+                       (:arguments 
+                          ( ("key" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1655 1661])
+                            ("increase_to" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1662 1676]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1637 1889])
+                    ("insert" function
+                       (:arguments 
+                          ( ("key" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1905 1911]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1893 2015])
+                    ("private" label nil (reparse-symbol classsubparts) [2017 2025])
+                    ("increase_key" function
+                       (:arguments 
+                          ( ("i" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2046 2060])
+                            ("key" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2061 2067]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2028 2249]))                  )
+                nil [117 2256]))          
+      :file "max_heap.h"
+      :pointmax 2264
+      :fsize 2263
+      :lastmodtime '(24318 47252 749874 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_HEAP")
+          )
+))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!main!cpp!datastructures!heap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

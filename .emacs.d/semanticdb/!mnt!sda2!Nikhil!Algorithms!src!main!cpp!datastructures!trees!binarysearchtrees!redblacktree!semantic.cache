@@ -1,0 +1,402 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("RED_BLACK_TREE" variable (:constant-flag t) nil [32 46])
+            ("vector" include (:system-flag t) nil [48 65])
+            ("algorithm" include (:system-flag t) nil [66 86])
+            ("../BinaryTree.h" include nil nil [88 114])
+            ("RedBlackTree" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [181 189])
+                    ("Color" type
+                       (:members 
+                          ( ("RED" variable
+                               (:constant-flag t
+                                :default-value (208 209)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [204 209])
+                            ("BLACK" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [211 217]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [192 218])
+                    ("RBTreeNode" type
+                       (:superclasses 
+                          ( ("TreeNode" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("RedBlackTree" friend nil (reparse-symbol classsubparts) [306 331])
+                            ("private" label nil (reparse-symbol classsubparts) [338 346])
+                            ("color" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol classsubparts) [351 363])
+                            ("parent" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [369 391])
+                            ("left" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [396 416])
+                            ("right" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [421 442])
+                            ("RBTreeNode" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("val_" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [459 473])
+                                    ("color_" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [474 487]))                                  
+                                :type ("RBTreeNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [448 579])
+                            ("RBTreeNode" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("val_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [598 612])
+                                    ("color_" variable (:type ("Color" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [613 626])
+                                    ("parent_" variable
+                                       (:pointer 1
+                                        :type ("RBTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [627 650])
+                                    ("left_" variable
+                                       (:pointer 1
+                                        :type ("RBTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [651 672])
+                                    ("right_" variable
+                                       (:pointer 1
+                                        :type ("RBTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [673 695]))                                  
+                                :type ("RBTreeNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [587 784])
+                            ("print" function (:type "void") (reparse-symbol classsubparts) [823 904])
+                            ("public" label nil (reparse-symbol classsubparts) [910 917])
+                            ("getColor" function
+                               (:methodconst-flag t
+                                :constant-flag t
+                                :type ("Color" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [922 979]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [243 1279])
+                    ("NIL" variable
+                       (:pointer 1
+                        :type ("RBTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1285 1311])
+                    ("root" variable
+                       (:pointer 1
+                        :type ("RBTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1285 1311])
+                    ("public" label nil (reparse-symbol classsubparts) [1315 1322])
+                    ("RedBlackTree" function
+                       (:constructor-flag t
+                        :type ("RedBlackTree" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1325 1402])
+                    ("numNodes" function
+                       (:methodconst-flag t
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3711 3829])
+                    ("print" function
+                       (:methodconst-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3833 3884])
+                    ("private" label nil (reparse-symbol classsubparts) [3888 3896])
+                    ("insertFix" function
+                       (:arguments 
+                          ( ("z" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3914 3931]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3899 4934])
+                    ("deleteFix" function
+                       (:arguments 
+                          ( ("x" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4953 4970]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4938 6422])
+                    ("print" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6439 6459])
+                            ("prefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6460 6479]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6428 6659])
+                    ("checkBlackHeights" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("nodes" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RBTreeNode" type
+                                             (:pointer 1
+                                              :template-specifier 
+                                                ( ("T" type nil nil nil))                                                )
+                                              nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6686 6727]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6663 6932])
+                    ("blackHeight" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("rootNode" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6961 6985]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [6936 7165])
+                    ("checkAdjacentReds" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("nodes" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RBTreeNode" type
+                                             (:pointer 1
+                                              :template-specifier 
+                                                ( ("T" type nil nil nil))                                                )
+                                              nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7194 7235]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7171 7552])
+                    ("toArray" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("rootNode" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7571 7595])
+                            ("result" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RBTreeNode" type
+                                             (:pointer 1
+                                              :template-specifier 
+                                                ( ("T" type nil nil nil))                                                )
+                                              nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7596 7632]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7558 7676])
+                    ("traverse" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("rootNode" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7694 7718])
+                            ("result" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("RBTreeNode" type
+                                             (:pointer 1
+                                              :template-specifier 
+                                                ( ("T" type nil nil nil))                                                )
+                                              nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7719 7755]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7680 7909])
+                    ("getHeight" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("rootNode" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7938 7962]))                          
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [7915 8094])
+                    ("find" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8120 8133])
+                            ("rootNode" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8134 8158]))                          
+                        :type ("RBTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8100 8412])
+                    ("successor" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8441 8461]))                          
+                        :type ("RBTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8416 8561])
+                    ("transplant" function
+                       (:arguments 
+                          ( ("u" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8581 8598])
+                            ("v" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8599 8616]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8565 8798])
+                    ("leftRotate" function
+                       (:arguments 
+                          ( ("x" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8820 8837]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8804 9126])
+                    ("rightRotate" function
+                       (:arguments 
+                          ( ("y" variable
+                               (:pointer 1
+                                :type ("RBTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9147 9164]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9130 9455]))                  
+                :superclasses 
+                  ( ("BinaryTree" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [116 9458]))          
+      :file "RedBlackTree.h"
+      :pointmax 9469
+      :fsize 9468
+      :lastmodtime '(24317 7738 234672 800000)
+      :unmatched-syntax '((semantic-list 3499 . 3665) (symbol 3490 . 3498) (CONST 3484 . 3489) (semantic-list 3481 . 3483) (symbol 3474 . 3481) (BOOL 3469 . 3473) (semantic-list 3396 . 3429) (symbol 3387 . 3395) (CONST 3381 . 3386) (semantic-list 3378 . 3380) (symbol 3369 . 3378) (INT 3365 . 3368) (UNSIGNED 3356 . 3364) (semantic-list 3292 . 3315) (symbol 3283 . 3291) (CONST 3277 . 3282) (semantic-list 3274 . 3276) (symbol 3267 . 3274) (punctuation 3265 . 3266) (punctuation 3264 . 3265) (symbol 3263 . 3264) (punctuation 3262 . 3263) (symbol 3254 . 3262) (CONST 3248 . 3253) (semantic-list 2930 . 3192) (symbol 2921 . 2929) (CONST 2915 . 2920) (semantic-list 2900 . 2914) (symbol 2892 . 2900) (BOOL 2887 . 2891) (semantic-list 2099 . 2829) (symbol 2090 . 2098) (semantic-list 2073 . 2089) (symbol 2067 . 2073) (BOOL 2062 . 2066) (semantic-list 1606 . 2015) (symbol 1597 . 1605) (semantic-list 1582 . 1596) (symbol 1576 . 1582) (VOID 1571 . 1575) (semantic-list 1431 . 1567) (symbol 1422 . 1430) (semantic-list 1419 . 1421) (symbol 1407 . 1419) (punctuation 1406 . 1407) (semantic-list 1242 . 1274) (symbol 1233 . 1241) (CONST 1227 . 1232) (semantic-list 1224 . 1226) (symbol 1216 . 1224) (punctuation 1214 . 1215) (symbol 1213 . 1214) (CONST 1207 . 1212) (semantic-list 1172 . 1199) (symbol 1163 . 1171) (CONST 1157 . 1162) (semantic-list 1154 . 1156) (symbol 1146 . 1154) (punctuation 1144 . 1145) (punctuation 1143 . 1144) (symbol 1142 . 1143) (punctuation 1141 . 1142) (symbol 1133 . 1141) (semantic-list 1099 . 1125) (symbol 1090 . 1098) (CONST 1084 . 1089) (semantic-list 1081 . 1083) (symbol 1074 . 1081) (punctuation 1072 . 1073) (punctuation 1071 . 1072) (symbol 1070 . 1071) (punctuation 1069 . 1070) (symbol 1061 . 1069) (semantic-list 1025 . 1053) (symbol 1016 . 1024) (CONST 1010 . 1015) (semantic-list 1007 . 1009) (symbol 998 . 1007) (punctuation 996 . 997) (punctuation 995 . 996) (symbol 994 . 995) (punctuation 993 . 994) (symbol 985 . 993) (semantic-list 815 . 817) (symbol 806 . 814) (semantic-list 803 . 805) (symbol 793 . 803) (punctuation 792 . 793) (punctuation 334 . 335) (punctuation 333 . 334) (symbol 332 . 333) (punctuation 331 . 332) (punctuation 304 . 305) (TYPENAME 296 . 304) (punctuation 295 . 296) (TEMPLATE 287 . 295) (semantic-list 1242 . 1274) (symbol 1233 . 1241) (CONST 1227 . 1232) (semantic-list 1224 . 1226) (symbol 1216 . 1224) (punctuation 1214 . 1215) (symbol 1213 . 1214) (CONST 1207 . 1212) (semantic-list 1172 . 1199) (symbol 1163 . 1171) (CONST 1157 . 1162) (semantic-list 1154 . 1156) (symbol 1146 . 1154) (punctuation 1144 . 1145) (punctuation 1143 . 1144) (symbol 1142 . 1143) (punctuation 1141 . 1142) (symbol 1133 . 1141) (semantic-list 1099 . 1125) (symbol 1090 . 1098) (CONST 1084 . 1089) (semantic-list 1081 . 1083) (symbol 1074 . 1081) (punctuation 1072 . 1073) (punctuation 1071 . 1072) (symbol 1070 . 1071) (punctuation 1069 . 1070) (symbol 1061 . 1069) (semantic-list 1025 . 1053) (symbol 1016 . 1024) (CONST 1010 . 1015) (semantic-list 1007 . 1009) (symbol 998 . 1007) (punctuation 996 . 997) (punctuation 995 . 996) (symbol 994 . 995) (punctuation 993 . 994) (symbol 985 . 993) (semantic-list 815 . 817) (symbol 806 . 814) (semantic-list 803 . 805) (symbol 793 . 803) (punctuation 792 . 793) (punctuation 334 . 335) (punctuation 333 . 334) (symbol 332 . 333) (punctuation 331 . 332) (punctuation 304 . 305) (TYPENAME 296 . 304) (punctuation 295 . 296) (TEMPLATE 287 . 295) (punctuation 239 . 240) (TYPENAME 231 . 239) (punctuation 230 . 231) (TEMPLATE 222 . 230))
+      :lexical-table 
+        '(("RED_BLACK_TREE")
+          )
+))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!main!cpp!datastructures!trees!binarysearchtrees!redblacktree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

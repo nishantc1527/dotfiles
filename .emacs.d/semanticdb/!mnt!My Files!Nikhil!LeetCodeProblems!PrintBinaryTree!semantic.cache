@@ -1,0 +1,84 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("string" include (:system-flag t) nil [19 36])
+            ("algorithm" include (:system-flag t) nil [37 57])
+            ("cmath" include (:system-flag t) nil [58 74])
+            ("queue" include (:system-flag t) nil [75 91])
+            ("tuple" include (:system-flag t) nil [92 108])
+            ("iostream" include (:system-flag t) nil [109 128])
+            ("../Nodes.h" include nil nil [130 151])
+            ("Solution" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [170 177])
+                    ("getHeight" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("TreeNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [194 209]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [180 317])
+                    ("std::vector" variable (:type "int") (reparse-symbol classsubparts) [338 376])
+                    ("printTree" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("TreeNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [394 409])
+                            ("res" variable
+                               (:reference 1
+                                :type ("res_type" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [410 424])
+                            ("col" variable (:type "int") (reparse-symbol arg-sub-list) [425 433])
+                            ("i" variable (:type "int") (reparse-symbol arg-sub-list) [434 440])
+                            ("j" variable (:type "int") (reparse-symbol arg-sub-list) [441 447]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [379 650])
+                    ("printTree" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("TreeNode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [675 690]))                          
+                        :type ("res_type" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [656 885]))                  
+                :type "class")
+                nil [153 888])
+            ("test" function
+               (:arguments 
+                  ( ("input" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [900 918]))                  
+                :type "void")
+                nil [890 1121])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1132 1141])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1142 1155]))                  
+                :type "int")
+                nil [1123 1273]))          
+      :file "Solution.cpp"
+      :pointmax 1274
+      :fsize 1273
+      :lastmodtime '(24351 55777 556430 500000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "Solution.cpp~"
+      :pointmax 166
+      :fsize 1519
+      :lastmodtime '(24351 50711 418472 300000)
+      :unmatched-syntax nil))
+  :file "!mnt!My Files!Nikhil!LeetCodeProblems!PrintBinaryTree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

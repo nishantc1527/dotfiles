@@ -1,0 +1,203 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("vector" include (:system-flag t) nil [1 18])
+            ("redblacktree/RedBlackTree.h" include nil nil [20 58])
+            ("binarysearchtree/BinarySearchTree.h" include nil nil [59 105])
+            ("../../../my_utils.h" include nil nil [106 136])
+            ("main" function (:type "int") nil [138 1088]))          
+      :file "main.cpp"
+      :pointmax 1089
+      :fsize 1132
+      :lastmodtime '(24309 18719 678364 800000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BINARY_TREE" variable (:constant-flag t) nil [29 40])
+            ("iostream" include (:system-flag t) nil [42 61])
+            ("queue" include (:system-flag t) nil [62 78])
+            ("TreeNode" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [119 126])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [129 142])
+                    ("TreeNode" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("val_" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [155 169]))                          
+                        :type ("TreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [146 195])
+                    ("TreeNode" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("val_" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [208 222]))                          
+                        :type ("TreeNode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [199 241])
+                    ("TreeNode" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [245 295])
+                    ("public" label nil (reparse-symbol classsubparts) [299 306])
+                    ("getParent" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [310 353])
+                    ("getLeft" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [359 400])
+                    ("getRight" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("TreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [406 448])
+                    ("getValue" function
+                       (:methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [454 510]))                  )
+                nil [80 513])
+            ("BinaryTree" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [557 564])
+                    ("BinaryTree" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [596 620])
+                    ("insert" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [687 702]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [667 707])
+                    ("remove" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [773 788]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [753 793])
+                    ("contains" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [872 887]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [850 898])
+                    ("getRoot" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("TreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [953 1000])
+                    ("getHeight" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [1040 1083])
+                    ("isValid" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1122 1155])
+                    ("numNodes" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1200 1241])
+                    ("print" function
+                       (:methodconst-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1277 1306]))                  )
+                nil [516 1310]))          
+      :file "BinaryTree.h"
+      :pointmax 1319
+      :fsize 1380
+      :lastmodtime '(24311 63971 115585 800000)
+      :unmatched-syntax '((punctuation 1306 . 1307) (punctuation 589 . 590) (DEFAULT 582 . 589) (punctuation 580 . 581) (semantic-list 577 . 579) (symbol 567 . 577))
+      :lexical-table 
+        '(("BINARY_TREE")
+          )
+))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!main!cpp!datastructures!trees!binarysearchtrees!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

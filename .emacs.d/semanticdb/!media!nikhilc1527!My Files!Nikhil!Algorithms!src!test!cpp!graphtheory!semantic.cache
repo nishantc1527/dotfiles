@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [1 25])
+            ("shortestpaths/bellman_ford_test.cpp" include nil nil [27 73]))          
+      :file "graphtheory_test.cpp"
+      :pointmax 74
+      :fsize 73
+      :lastmodtime '(24311 43630 664935 100000)
+      :unmatched-syntax nil))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!graphtheory!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

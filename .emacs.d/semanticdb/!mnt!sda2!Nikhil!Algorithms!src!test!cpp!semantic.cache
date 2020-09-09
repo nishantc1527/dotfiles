@@ -1,0 +1,34 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("all" function (:arguments ("build" "run" "clean")) nil [1 22])
+            (".PHONY" function (:arguments ("all")) nil [22 34])
+            ("build" function (:arguments ("all_tests.cpp")) nil [35 312])
+            ("valgrind" function (:arguments ("out")) nil [313 455])
+            ("run" function nil nil [456 461])
+            ("clean" function (:arguments ("out")) nil [531 554]))          
+      :file "Makefile"
+      :pointmax 554
+      :fsize 552
+      :lastmodtime '(24322 26310 356708 700000)
+      :unmatched-syntax '((shell-command 543 . 553) (bol 542 . 542) (shell-command 518 . 523) (bol 517 . 517) (shell-command 479 . 511) (bol 478 . 478) (semantic-list 468 . 477) (punctuation 467 . 468) (IFDEF 461 . 466) (bol 461 . 461)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [1 25])
+            ("datastructures/data_structures_test.cpp" include nil nil [27 77])
+            ("sorting/sorting_test.cpp" include nil nil [78 113])
+            ("graphtheory/graphtheory_test.cpp" include nil nil [114 157]))          
+      :file "all_tests.cpp"
+      :pointmax 158
+      :fsize 157
+      :lastmodtime '(24318 47970 289921 500000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!test!cpp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,20 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("gtest/gtest.h" include (:system-flag t) nil [1 25])
+            ("binarysearchtrees/binarysearchtree/binary_search_tree_test.cpp" include nil nil [27 100])
+            ("binarysearchtrees/redblacktree/red_black_tree_test.cpp" include nil nil [101 166])
+            ("heap/max_heap_test.cpp" include nil nil [167 200]))          
+      :file "trees_test.cpp"
+      :pointmax 201
+      :fsize 200
+      :lastmodtime '(24311 43750 757084 200000)
+      :unmatched-syntax nil))
+  :file "!media!nikhilc1527!My Files!Nikhil!Algorithms!src!test!cpp!datastructures!trees!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

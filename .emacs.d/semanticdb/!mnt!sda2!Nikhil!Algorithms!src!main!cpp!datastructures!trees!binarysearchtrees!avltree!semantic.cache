@@ -1,0 +1,310 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("AVL_TREE" variable (:constant-flag t) nil [26 34])
+            ("../BinaryTree.h" include nil nil [36 62])
+            ("AVLTree" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [125 133])
+                    ("AVLTreeNode" type
+                       (:superclasses 
+                          ( ("TreeNode" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("AVLTree" friend nil (reparse-symbol classsubparts) [221 241])
+                            ("private" label nil (reparse-symbol classsubparts) [248 256])
+                            ("height" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [261 280])
+                            ("balanceFactor" variable (:type "int") (reparse-symbol classsubparts) [285 303])
+                            ("parent" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [313 336])
+                            ("left" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [341 362])
+                            ("right" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [367 389])
+                            ("AVLTreeNode" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("val_" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [407 421]))                                  
+                                :type ("AVLTreeNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [395 498])
+                            ("AVLTreeNode" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("val_" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [518 532])
+                                    ("parent_" variable
+                                       (:pointer 1
+                                        :type ("AVLTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [533 557])
+                                    ("left_" variable
+                                       (:pointer 1
+                                        :type ("AVLTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [558 580])
+                                    ("right_" variable
+                                       (:pointer 1
+                                        :type ("AVLTreeNode" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [581 604]))                                  
+                                :type ("AVLTreeNode" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [506 678])
+                            ("print" function
+                               (:methodconst-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [785 855])
+                            ("public" label nil (reparse-symbol classsubparts) [861 868]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [157 1167])
+                    ("rootParent" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1171 1205])
+                    ("root" variable
+                       (:pointer 1
+                        :type ("AVLTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1171 1205])
+                    ("public" label nil (reparse-symbol classsubparts) [1207 1214])
+                    ("AVLTree" function
+                       (:constructor-flag t
+                        :type ("AVLTree" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1217 1298])
+                    ("private" label nil (reparse-symbol classsubparts) [5083 5091])
+                    ("isValidBST" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5113 5134]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5097 5645])
+                    ("isValidAVLTree" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5669 5690]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5649 5854])
+                    ("fixTree" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5873 5894]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5860 6387])
+                    ("rightRotate" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6408 6429]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6391 6843])
+                    ("leftRotate" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6863 6884]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6847 7301])
+                    ("updateBalanceFactorsAndHeights" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7341 7362]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7305 7503])
+                    ("calcBalanceFactor" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7530 7551]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7507 7680])
+                    ("setBalanceFactors" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7707 7728]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7684 8243])
+                    ("calcHeights" function
+                       (:arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8264 8285]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8247 8775])
+                    ("print" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("node" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8792 8813])
+                            ("prefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8814 8833]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8781 9007])
+                    ("minimum" function
+                       (:methodconst-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9035 9056]))                          
+                        :type ("AVLTreeNode" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [9011 9156])
+                    ("getHeight" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9182 9203]))                          
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9160 9318])
+                    ("numNodes" function
+                       (:methodconst-flag t
+                        :arguments 
+                          ( ("root" variable
+                               (:pointer 1
+                                :type ("AVLTreeNode" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9343 9364]))                          
+                        :type ("std::size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9322 9467]))                  
+                :superclasses 
+                  ( ("BinaryTree" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [64 9470]))          
+      :file "AVLTree.h"
+      :pointmax 9479
+      :fsize 9478
+      :lastmodtime '(24317 25979 734772 700000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("AVL_TREE")
+          )
+))
+  :file "!mnt!sda2!Nikhil!Algorithms!src!main!cpp!datastructures!trees!binarysearchtrees!avltree!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

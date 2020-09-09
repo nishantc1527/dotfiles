@@ -1,0 +1,79 @@
+make
+cd /media/nikhilc1527/My\ Files/Nikhil/Algorithms/
+cd src/test/cpp/datastructures/trees/binarysearchtrees/binarysearchtree/
+ls
+cd ..
+cd redblacktree/
+make
+cd ..
+ls
+cd binarysearchtree/
+ls
+ls
+make
+make build 
+make
+cd /media/nikhilc1527/My\ Files/Nikhil/Algorithms/src/test/cpp/datastructures/trees/binarysearchtrees/binarysearchtree/
+cd /media/nikhilc1527/My\ Files/Nikhil/Algorithms/src/main/cpp/datastructures/trees/binarysearchtrees/
+ls
+make
+./out
+cd /media/nikhilc1527/My\ Files/Nikhil/Algorithms/src/test/cpp/datastructures/trees/binarysearchtrees/binarysearchtree/
+make
+rm out 
+make
+make
+make build
+./out --gtest_filter=BinarySearchTree.NoNodesDeletionTest
+make build
+./out --gtest_filter=BinarySearchTreeTest.Duplicates
+make build
+./out --gtest_filter=BinarySearchTreeTest.DuplicatesDeletion
+make build
+out
+/usr/bin/gdb --help
+make build
+make run 
+./out --gtest_filter=*.DuplicatesDeletion
+make build
+ls
+make build
+make run
+make build
+make build
+rm out 
+make build
+make clean
+make build
+make clean
+make build
+make clean
+cd /mnt/sda2/Nikhil/Algorithms/src/test/cpp/
+ls
+make
+cd /sudo::~
+cd /sudo::
+cd /sudo::/etc
+cd ~
+cd /sudo::~
+ls
+pwd
+cd /sudo::/etc
+ls
+pwd
+cd ..
+ls
+cd home/nikhilc1527/
+ls
+hostname
+id
+exit
+which clangd
+exit
+cd MyFiles/Nikhil/LeetCodeProblems/TwoSum/
+pwd 
+sudo apt-get install dkms
+cd
+sudo apt-get uninstall dkms
+sudo apt-get remove dkms
+sudo apt-get install dkms

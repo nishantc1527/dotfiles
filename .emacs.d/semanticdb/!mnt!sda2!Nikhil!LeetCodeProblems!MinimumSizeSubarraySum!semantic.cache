@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags nil
+      :file "Solution.cpp"
+      :pointmax 366
+      :fsize 365
+      :lastmodtime '(24343 14584 711583 300000)
+      :unmatched-syntax nil))
+  :file "!mnt!sda2!Nikhil!LeetCodeProblems!MinimumSizeSubarraySum!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
