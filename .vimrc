@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'Shougo/echodoc.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'airblade/vim-gitgutter'
 Plug 'andreasvc/vim-256noir'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'chiel92/vim-autoformat'
@@ -77,6 +76,7 @@ autocmd BufEnter * silent! lcd %:p:h
 " -------------------------------------------------------------------- GRUVBOX
 
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
 
 " ----------------------------------------------------------------- ONE DARK THEME
 
