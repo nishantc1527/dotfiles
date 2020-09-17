@@ -19,3 +19,4 @@ source ~/.config/nvim/plugconfig/autoformat.vim
 source ~/.config/nvim/plugconfig/palenight.vim
 source ~/.config/nvim/plugconfig/cpphighlighting.vim
 source ~/.config/nvim/plugconfig/devicons.vim
+source ~/.config/nvim/plugconfig/vimgo.vim
