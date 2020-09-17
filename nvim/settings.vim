@@ -10,7 +10,7 @@ set fileencoding=utf-8                  " The encoding written to file
 set formatoptions-=cro                  " Stop newline continution of comments
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set incsearch
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                        " treat dash separated words as a word text object"
 set nobackup
 set nobackup                            " This is recommended by coc
 set nohlsearch
@@ -35,6 +35,6 @@ syntax enable                           " Enables syntax highlighing
 set notitle
 set noicon
 
-colorscheme gruvbox
+colorscheme palenight
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

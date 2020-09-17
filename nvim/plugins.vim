@@ -51,5 +51,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'
 Plug 'chiel92/vim-autoformat'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
