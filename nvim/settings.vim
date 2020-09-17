@@ -38,3 +38,5 @@ set noicon
 colorscheme palenight
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+autocmd BufEnter * silent! lcd %:p:h

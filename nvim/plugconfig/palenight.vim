@@ -9,5 +9,3 @@ endif
 if (has("termguicolors"))
    set termguicolors
 endif
-
-let g:airline_theme = "palenight"

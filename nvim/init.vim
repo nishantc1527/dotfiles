@@ -17,3 +17,5 @@ source ~/.config/nvim/plugconfig/markdown.vim
 source ~/.config/nvim/plugconfig/whitespace.vim
 source ~/.config/nvim/plugconfig/autoformat.vim
 source ~/.config/nvim/plugconfig/palenight.vim
+source ~/.config/nvim/plugconfig/cpphighlighting.vim
+source ~/.config/nvim/plugconfig/devicons.vim
