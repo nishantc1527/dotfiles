@@ -1,0 +1,9 @@
+FlooJoinWorkspace	floobits.txt	/*FlooJoinWorkspace*
+FlooLeaveWorkspace	floobits.txt	/*FlooLeaveWorkspace*
+FlooRefreshWorkspace	floobits.txt	/*FlooRefreshWorkspace*
+FlooShareDirPrivate	floobits.txt	/*FlooShareDirPrivate*
+FlooShareDirPublic	floobits.txt	/*FlooShareDirPublic*
+FlooSummon	floobits.txt	/*FlooSummon*
+FlooToggleFollowMode	floobits.txt	/*FlooToggleFollowMode*
+floobits	floobits.txt	/*floobits*
+floobits.txt	floobits.txt	/*floobits.txt*
