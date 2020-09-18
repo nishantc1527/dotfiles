@@ -67,8 +67,6 @@ export PATH="/home/nchatterjee/nvim-linux64/bin:$PATH"
 
 set -o vi
 
-alias pls="sudo"
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-alias i="sudo yum install \$(~/word.py \$(yum list available) | fzf -m --preview='yum info {}')"
+alias i="sudo yum install -y \$(~/word.py \$(yum list available) | fzf -m --preview='yum info {}')"
