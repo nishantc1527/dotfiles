@@ -20,3 +20,5 @@ source ~/.config/nvim/plugconfig/palenight.vim
 source ~/.config/nvim/plugconfig/cpphighlighting.vim
 source ~/.config/nvim/plugconfig/devicons.vim
 source ~/.config/nvim/plugconfig/vimgo.vim
+source ~/.config/nvim/plugconfig/vimrust.vim
+source ~/.config/nvim/plugconfig/json.vim
