@@ -33,6 +33,8 @@ alias ...='cd ../..'
 alias ....='cd ../..'
 alias .....='cd ../../..'
 alias ......='cd ../../..'
+alias .......='cd ../../../..'
+alias ........='cd ../../../../..'
 
 alias rm='rm -rf'
 
@@ -47,6 +49,11 @@ alias commit='git commit'
 alias push='git push'
 alias add='git add .'
 alias status='git status'
+alias diff='git diff'
+alias clone='git clone'
+alias pull='git pull'
+
+alias vim="nvim"
 
 # Git branch in prompt.
 
@@ -55,3 +62,13 @@ parse_git_branch() {
 }
 
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+export PATH="/home/nchatterjee/nvim-linux64/bin:$PATH"
+
+set -o vi
+
+alias pls="sudo"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias i="sudo yum install \$(~/word.py \$(yum list available) | fzf -m --preview='yum info {}')"
