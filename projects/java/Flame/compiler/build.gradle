@@ -1,0 +1,44 @@
+plugins {
+  id 'java'
+}
+
+repositories {
+  mavenCentral()
+}
+
+tasks.jar.enabled = false
+
+shadowJar {
+  manifest { // Create A Runnable Jar File
+    attributes 'Main-Class': 'compiler.main.Main'
+  }
+}
+
+dependencies {
+  implementation 'org.jetbrains:annotations:19.0.0'
+  implementation 'info.picocli:picocli:4.5.0'
+  testImplementation 'junit:junit:4.13' // Use JUnit For Unit Testing
+
+  implementation 'org.projectlombok:lombok:1.18.12'
+  annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+  implementation project(':compiler:compilertools')
+  implementation project(':compiler:parser')
+}
+
+task createScript(type: Exec) {
+  workingDir '.'
+  commandLine 'cat', 'shebang.txt', 'build/libs/compiler-all.jar', '>', 'build/libs/flame', '&&', 'chmod', 'u+x', 'build/libs/flame'
+
+  dependsOn(shadowJar)
+}
+
+build {
+  dependsOn(createScript)
+}
+
+clean {
+  doLast {
+    file('bin').deleteDir()
+  }
+}

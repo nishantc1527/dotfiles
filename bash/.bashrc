@@ -52,6 +52,9 @@ alias status='git status'
 alias diff='git diff'
 alias clone='git clone'
 alias pull='git pull'
+alias reset='git reset'
+alias log="git log"
+alias revert="git revert"
 
 alias vim="nvim"
 
@@ -67,6 +70,10 @@ export PATH="/home/nchatterjee/nvim-linux64/bin:$PATH"
 
 set -o vi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias pip="pip3"
 
-alias i="sudo yum install -y \$(~/word.py \$(yum list available) | fzf -m --preview='yum info {}')"
+alias i="sudo yum install -y \$(iword.py \$(yum list available) | fzf -m --preview='yum info {}')"
+alias u="sudo yum remove -y \$(uword.py \$(yum list installed) | fzf -m --preview='yum info {}')"
+alias g="cd \$(dirs.py | fzf)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

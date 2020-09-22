@@ -57,6 +57,7 @@ Plug 'mattn/webapi-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neovimhaskell/haskell-vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'othree/html5.vim'
@@ -91,5 +92,6 @@ Plug 'vim-scripts/c.vim'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'vim-scripts/matchit.zip'
 Plug 'wavded/vim-stylus'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()

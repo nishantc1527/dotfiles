@@ -1,0 +1,6 @@
+rootProject.name = 'Flame'
+
+include ':compiler'
+include ':compiler:compilertools'
+include ':compiler:parser'
+include ':compiler:parser:lexer'

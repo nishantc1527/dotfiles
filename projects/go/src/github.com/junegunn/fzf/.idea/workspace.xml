@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff649c2d-1945-4d40-8937-53400b4f0110" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/fzf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="GOROOT" path="/usr/lib/golang" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="JupyterTrust" id="50ddd189-d53c-4d9c-8ed0-3f62ff7f8ded" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="m1qok2gb" />
+  </component>
+  <component name="ProjectId" id="1hhTwYFc8U7sFJDSOjVOH41PSUE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff649c2d-1945-4d40-8937-53400b4f0110" name="Default Changelist" comment="" />
+      <created>1600463012167</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600463012167</updated>
+      <workItem from="1600463013450" duration="131000" />
+      <workItem from="1600463165221" duration="624000" />
+      <workItem from="1600541175863" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="755" y="261" width="400" height="684" key="#GOPATH" timestamp="1600463120156">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="755" y="261" width="400" height="684" key="#GOPATH/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600463120156" />
+    <state x="755" y="436" width="400" height="334" key="#Go_Modules" timestamp="1600462589468">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="755" y="436" width="400" height="334" key="#Go_Modules/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600462589468" />
+    <state x="694" y="399" width="522" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600462698873">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="694" y="399" width="522" height="409" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600462698873" />
+    <state x="738" y="361" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600463087614">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="738" y="361" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600463087614" />
+    <state x="456" y="235" width="1007" height="737" key="SettingsEditor" timestamp="1600541186557">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="456" y="235" width="1007" height="737" key="SettingsEditor/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600541186557" />
+    <state x="696" y="445" width="518" height="316" key="cloudConfig.PluginsDialog" timestamp="1600462874017">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="696" y="445" width="518" height="316" key="cloudConfig.PluginsDialog/1920.0.1920.1200/0.27.1920.1173@0.27.1920.1173" timestamp="1600462874017" />
+  </component>
+</project>

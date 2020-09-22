@@ -1,0 +1,41 @@
+plugins {
+  id 'java'
+  id 'application'
+  id "com.diffplug.spotless" version "5.1.0" // Format Everything Correctly
+  id "com.github.johnrengelman.shadow" version "6.0.0"
+}
+
+tasks.jar.enabled = false
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+  mavenCentral()
+}
+
+spotless {
+  java {
+    importOrder()
+    removeUnusedImports()
+    googleJavaFormat()
+  }
+}
+
+shadowJar {
+  archiveName 'serverside.jar'
+}
+
+dependencies {
+  implementation 'org.projectlombok:lombok:1.18.12'
+  annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+  implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+tasks.build.dependsOn(tasks.shadowJar)
+tasks.spotlessCheck.dependsOn(tasks.spotlessApply)
+
+tasks.run.dependsOn(tasks.spotlessApply)
+
+mainClassName = 'com.serverside.Main'
