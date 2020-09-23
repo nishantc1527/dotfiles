@@ -1,3 +1,0 @@
-include ':app'
-include ':server'
-rootProject.name = "Corona-request-maker"
