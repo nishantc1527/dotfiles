@@ -22,10 +22,10 @@ import picocli.CommandLine;
 public class Main {
   /** The name of the file to compile. */
   @CommandLine.Option(
-      names = {"-f", "--file"},
-      required = true,
-      description = "The file to compile")
-  private String fileName;
+  names = {"-f", "--file"},
+  required = true,
+  description = "The file to compile")
+    private String fileName;
 
   /**
    * Throws a compiler error with a message. It gives the stage in which the error was invoked.

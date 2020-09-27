@@ -75,5 +75,6 @@ alias pip="pip3"
 alias i="sudo yum install -y \$(iword.py \$(yum list available) | fzf -m --preview='yum info {}')"
 alias u="sudo yum remove -y \$(uword.py \$(yum list installed) | fzf -m --preview='yum info {}')"
 alias g="cd \$(dirs.py | fzf)"
+alias v="vim \$(fzf)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -6,7 +6,7 @@ def main():
     args = sys.argv
     args = args[17:]
     new_args = []
-    i = 2
+    i = 0
 
     while i < len(args):
         new_args.append(args[i])
