@@ -1,7 +1,0 @@
-package pkg
-
-import "os"
-
-func fn() {
-	os.OpenFile("", 0, 0644) // want `file mode.+`
-}
