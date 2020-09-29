@@ -35,7 +35,7 @@ syntax enable                           " Enables syntax highlighing
 set notitle
 set noicon
 
-colorscheme palenight
+colorscheme matrix
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
