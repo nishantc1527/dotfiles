@@ -1,8 +1,0 @@
-0: program = program { \n configurations statements }
-1: configurations = uses { \n libraries \n } | nil
-2: libraries = library \n library | nil
-3: statements = statement \n statement | nil
-4: statement = id(parameters)
-5: parameters = expr, expr | nil
-6: expr = id
-7: library = id
