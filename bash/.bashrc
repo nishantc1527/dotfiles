@@ -58,8 +58,8 @@ set -o vi
 
 alias pip="pip3"
 
-alias i=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep -v installed | awk \'{print $1;}\' | sort | fzf -m)'
-alias u=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep installed | awk \'{print $1;}\' | sort | fzf -m)'
+alias i=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep -v installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Si {}\")'
+alias u=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Si {}\")'
 alias g="cd \$(~/dirs.py | fzf)"
 alias v="vim \$(fzf)"
 
