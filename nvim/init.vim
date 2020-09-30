@@ -22,3 +22,4 @@ source ~/.config/nvim/plugconfig/devicons.vim
 source ~/.config/nvim/plugconfig/vimgo.vim
 source ~/.config/nvim/plugconfig/vimrust.vim
 source ~/.config/nvim/plugconfig/json.vim
+source ~/.config/nvim/plugconfig/airline.vim
