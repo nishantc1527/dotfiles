@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 # This guy is good https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c. I copied lots of things from him.
 
+yes | sudo pacman -Syu
 neofetch
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -34,7 +35,9 @@ alias .......='cd ../../../..'
 alias ........='cd ../../../../..'
 
 alias ls='ls -lAFh --color=always' # add colors and file type extensions
+
 alias sl='ls'
+alias dc='cd'
 
 alias cls="clear"
 
@@ -63,6 +66,7 @@ alias pip="pip3"
 alias i=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep -v installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Sii {}\")'
 alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Sii {}\")'
 alias g="cd \$(~/dirs.py | fzf)"
+alias gg="cd \$(~/home-dirs.py | fzf)"
 alias v="vim \$(fzf)"
 
 alias sync="timedatectl set-ntp true"
@@ -70,5 +74,8 @@ alias sync="timedatectl set-ntp true"
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 alias r="ranger"
+alias n="nnn"
 
 export NVIM_HOME="$HOME/.config/nvim"
+export EDITOR="nvim"
+export VISUAL="nvim"
