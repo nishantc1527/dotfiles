@@ -10,7 +10,10 @@ def main():
         dir = queue.pop(0)
         print(dir)
 
-        dirs = next(os.walk(dir))[1]
+        try:
+            dirs = next(os.walk(dir))[1]
+        except StopIteration:
+            pass
 
         for elem in dirs:
             queue.append(dir + "/" + elem)

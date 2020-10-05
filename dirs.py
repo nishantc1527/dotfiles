@@ -8,12 +8,12 @@ def main():
 
     while queue:
         dir = queue.pop(0)
-        try:
-            print(dir)
-        except BrokenPipeError:
-            pass
+        print(dir)
 
-        dirs = next(os.walk(dir))[1]
+        try:
+            dirs = next(os.walk(dir))[1]
+        except StopIteration:
+            pass
 
         for elem in dirs:
             queue.append(dir + "/" + elem)
