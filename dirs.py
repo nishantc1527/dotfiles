@@ -8,7 +8,10 @@ def main():
 
     while queue:
         dir = queue.pop(0)
-        print(dir)
+        try:
+            print(dir)
+        except BrokenPipeError:
+            pass
 
         dirs = next(os.walk(dir))[1]
 

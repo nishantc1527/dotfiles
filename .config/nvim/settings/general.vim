@@ -1,37 +1,36 @@
-set autoindent                          " Good auto indent
-set background=dark                     " tell vim what the background color looks like
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set cmdheight=2                         " More space for displaying messages
-set encoding=utf-8                      " The encoding displayed
-set expandtab                           " Converts tabs to spaces
-set fileencoding=utf-8                  " The encoding written to file
-set formatoptions-=cro                  " Stop newline continution of comments
-set hidden                              " Required to keep multiple buffers open multiple buffers
+set autoindent
+set background=dark
+set clipboard=unnamedplus
+set cmdheight=2
+set encoding=utf-8
+set expandtab
+set fileencoding=utf-8
+set formatoptions-=cro
+set hidden
 set incsearch
-set iskeyword+=-                        " treat dash separated words as a word text object"
+set iskeyword+=-
 set nobackup
-set nobackup                            " This is recommended by coc
 set nohlsearch
 set noicon
 set noswapfile
 set notitle
-set nowrap                              " Display long lines as just one line
-set nowritebackup                       " This is recommended by coc
-set pumheight=10                        " Makes popup menu smaller
-set relativenumber number               " Line numbers
-set shiftwidth=2                        " Change the number of space characters inserted for indentation
+set nowrap
+set nowritebackup
+set pumheight=10
+set relativenumber number
+set shiftwidth=2
 set shortmess+=c
-set showtabline=2                       " Always show tabs
-set smartindent                         " Makes indenting smart
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
-set tabstop=2 softtabstop=2             " Insert 2 spaces for a tab
-set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set showtabline=2
+set smartindent
+set smarttab
+set splitright
+set t_Co=256
+set tabstop=2 softtabstop=2
+set timeoutlen=500
 set undodir=~/.config/nvim/undo
 set undofile
-set updatetime=100                      " Faster completion
-syntax enable                           " Enables syntax highlighing
+set updatetime=100
+syntax enable
 
 if (has("nvim"))
    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -46,3 +45,12 @@ if (has("termguicolors"))
 endif
 
 colorscheme matrix
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
