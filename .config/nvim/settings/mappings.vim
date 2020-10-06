@@ -15,7 +15,7 @@ nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
 nnoremap <c-o> o<esc>
-nnoremap <m-o> O<esc>
+nnoremap <c-O> O<esc>
 nnoremap / :Lines<cr>
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>

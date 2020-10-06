@@ -44,7 +44,7 @@ if (has("termguicolors"))
    set termguicolors
 endif
 
-colorscheme matrix
+colorscheme gruvbox
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

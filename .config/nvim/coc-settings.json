@@ -24,10 +24,13 @@
     "v": "open:vsplit"
   },
   "cSpell.userWords": [
+    "Arial",
     "Chatterjee",
     "Nishant",
     "curr",
+    "gruvbox",
     "jfinder",
-    "nums"
+    "nums",
+    "pylint"
   ]
 }

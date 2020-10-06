@@ -43,4 +43,7 @@ Plug 'airblade/vim-gitgutter'
 " Debugging
 Plug 'puremourning/vimspector'
 
+" Linting
+Plug 'dense-analysis/ale'
+
 call plug#end()
