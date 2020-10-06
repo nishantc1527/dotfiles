@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Sweet
+ColorScheme=Gruvbox
 
 [General]
 Name=Profile 1
