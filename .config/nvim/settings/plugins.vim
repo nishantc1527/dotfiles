@@ -27,9 +27,6 @@ Plug 'junegunn/fzf.vim'
 " Language Pack
 Plug 'sheerun/vim-polyglot'
 
-" Nerd Tree
-Plug 'preservim/nerdtree'
-
 " Ranger Integration
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -37,7 +34,8 @@ Plug 'rbgrouleff/bclose.vim'
 " Fancy Start Screen
 Plug 'mhinz/vim-startify'
 
-" Show Added, Changed, And Deleted Lines With Git
+" Git Integration
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Debugging
@@ -45,5 +43,14 @@ Plug 'puremourning/vimspector'
 
 " Linting
 Plug 'dense-analysis/ale'
+
+" Additional Colorschemes
+Plug 'sainnhe/forest-night'
+Plug 'tomasiser/vim-code-dark'
+Plug 'drewtempelmeyer/palenight.vim'
+
+" Nerd Plugins
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()

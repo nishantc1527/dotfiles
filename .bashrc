@@ -10,10 +10,8 @@ PS1='[\u@\h \W]\$ '
 
 # This guy is good https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c. I copied lots of things from him.
 
-yes | sudo pacman -Syu
 neofetch
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . ~/.fancy-git/prompt.sh
 
 for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
@@ -79,3 +77,5 @@ alias n="nnn"
 export NVIM_HOME="$HOME/.config/nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+alias gw="./gradlew"
