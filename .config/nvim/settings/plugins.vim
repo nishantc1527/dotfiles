@@ -48,6 +48,8 @@ Plug 'dense-analysis/ale'
 Plug 'sainnhe/forest-night'
 Plug 'tomasiser/vim-code-dark'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'bluz71/vim-moonfly-colors'
 
 " Nerd Plugins
 Plug 'preservim/nerdtree'

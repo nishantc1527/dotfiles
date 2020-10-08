@@ -10,7 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 # This guy is good https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c. I copied lots of things from him.
 
-neofetch
+neofetch | lolcat
 
 . ~/.fancy-git/prompt.sh
 
@@ -32,14 +32,14 @@ alias ......='cd ../../..'
 alias .......='cd ../../../..'
 alias ........='cd ../../../../..'
 
-alias ls='ls -lAFh --color=always' # add colors and file type extensions
+alias ls='ls -lA | lolcat'
 
 alias sl='ls'
 alias dc='cd'
 
 alias cls="clear"
 
-alias da='date "+%Y-%m-%d %A %T %Z"'
+alias da='date "+%Y-%m-%d %A %T %Z" | lolcat'
 
 alias commit='git commit'
 alias push='git push'
@@ -54,8 +54,6 @@ alias revert="git revert"
 alias restore="git restore"
 
 alias vim="nvim"
-
-export PATH="/home/nchatterjee/nvim-linux64/bin:$PATH"
 
 set -o vi
 
@@ -79,3 +77,5 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 alias gw="./gradlew"
+
+alias rm="trash"
