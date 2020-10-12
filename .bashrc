@@ -39,19 +39,24 @@ alias dc='cd'
 
 alias cls="clear"
 
-alias da='date "+%Y-%m-%d %A %T %Z" | lolcat'
+alias date='date "+%Y-%m-%d %A %T %Z" | lolcat'
+alias ps='ps | lolcat'
+alias cal='cal | lolcat'
 
-alias commit='git commit'
-alias push='git push'
 alias add='git add .'
-alias status='git status'
+alias branch='git branch'
+alias clone='gh repo clone'
+alias commit='git commit'
 alias diff='git diff'
-alias clone='git clone'
-alias pull='git pull'
-alias reset='git reset'
 alias log="git log"
-alias revert="git revert"
+alias pull='git pull'
+alias push='git push'
+alias reset='git reset'
 alias restore="git restore"
+alias revert="git revert"
+alias status='git status'
+
+alias tree="tree -C"
 
 alias vim="nvim"
 
@@ -78,4 +83,4 @@ export VISUAL="nvim"
 
 alias gw="./gradlew"
 
-alias rm="trash"
+alias rm="sudo trash"

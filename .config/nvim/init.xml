@@ -1,0 +1,11 @@
+<config>
+  <mappings>
+    <leader> </leader>
+    <insert>
+      <mapping>
+        <key>jk</key>
+        <value>esc</value>
+      </mapping>
+    </insert>
+  </mappings>
+</config>

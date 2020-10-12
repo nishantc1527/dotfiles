@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Gruvbox
+ColorScheme=klorax.retrofuturism-transparent
 
 [General]
 Name=Profile 1

@@ -9,6 +9,7 @@ Plug 'chiel92/vim-autoformat'
 
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 
 " Automatic Window Resizing
 Plug 'camspiers/animate.vim'
@@ -44,15 +45,24 @@ Plug 'puremourning/vimspector'
 " Linting
 Plug 'dense-analysis/ale'
 
+" Nerd Plugins
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " Additional Colorschemes
 Plug 'sainnhe/forest-night'
 Plug 'tomasiser/vim-code-dark'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'bluz71/vim-moonfly-colors'
-
-" Nerd Plugins
-Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
+Plug 'whatyouhide/vim-gotham'
+Plug 'glepnir/oceanic-material'
+Plug 'jaredgorski/spacecamp'
+Plug 'artanikin/vim-synthwave84'
+Plug 'connorholyday/vim-snazzy'
 
 call plug#end()

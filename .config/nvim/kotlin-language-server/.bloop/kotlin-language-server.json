@@ -1,0 +1,287 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "kotlin-language-server",
+        "directory": "/home/nchatterjee/kotlin-language-server",
+        "workspaceDir": "/home/nchatterjee/kotlin-language-server",
+        "sources": [
+            "/home/nchatterjee/kotlin-language-server/src/main/kotlin",
+            "/home/nchatterjee/kotlin-language-server/src/main/java"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar",
+            "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar",
+            "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+        ],
+        "out": "/home/nchatterjee/kotlin-language-server/.bloop/kotlin-language-server/build",
+        "classesDir": "/home/nchatterjee/kotlin-language-server/.bloop/kotlin-language-server/build/classes",
+        "resources": [
+            "/home/nchatterjee/kotlin-language-server/src/main/resources"
+        ],
+        "java": {
+            "options": [
+                "-source",
+                "15",
+                "-target",
+                "15",
+                "-h",
+                "/home/nchatterjee/kotlin-language-server/build/generated/sources/headers/java/main",
+                "-g",
+                "-sourcepath",
+                "-proc:none",
+                "-XDuseUnsharedTable=true"
+            ]
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/home/nchatterjee/jdk-15",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "classpath": [
+                "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar",
+                "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar",
+                "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.jetbrains",
+                    "name": "annotations",
+                    "version": "13.0",
+                    "artifacts": [
+                        {
+                            "name": "annotations",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar"
+                        },
+                        {
+                            "name": "annotations",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-compiler-embeddable",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-compiler-embeddable",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.0/5b8f86fea035328fc9e8c660773037a3401ce25f/kotlin-compiler-embeddable-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-compiler-embeddable",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.0/e5f0d669a77787ccbccd49c71b57bfd7b35faec4/kotlin-compiler-embeddable-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-scripting-jvm",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-scripting-jvm",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.4.0/44b8b2b51c3d678a32bc653990220901096fff63/kotlin-scripting-jvm-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-scripting-jvm",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.4.0/d807bf2ab36765af04b29319989322efd5ad1401/kotlin-scripting-jvm-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-scripting-common",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-scripting-common",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.4.0/9c5c5503c8f96b477661789168b3f4a3c61a6c6e/kotlin-scripting-common-1.4.0.jar"
+                        },
+                        {
+                            "name": "kotlin-scripting-common",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.4.0/e33970af77c12a6edf2c7ae0f53187e6bcd8c115/kotlin-scripting-common-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-klib-commonizer-embeddable",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-klib-commonizer-embeddable",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-klib-commonizer-embeddable/1.4.0/adf4b01083ae6832e4aec1560f775150231ed18b/kotlin-klib-commonizer-embeddable-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-klib-commonizer-embeddable",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-klib-commonizer-embeddable/1.4.0/ad62cd5205ac5ce19a08de3c9ad5e10a04ea3419/kotlin-klib-commonizer-embeddable-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-scripting-compiler-embeddable",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-scripting-compiler-embeddable",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.4.0/44a713572690b1a8b1e58ea2d82ebb27bf0e1e1b/kotlin-scripting-compiler-embeddable-1.4.0.jar"
+                        },
+                        {
+                            "name": "kotlin-scripting-compiler-embeddable",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/1.4.0/5b8f86fea035328fc9e8c660773037a3401ce25f/kotlin-scripting-compiler-embeddable-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-daemon-embeddable",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-daemon-embeddable",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.0/5b8f86fea035328fc9e8c660773037a3401ce25f/kotlin-daemon-embeddable-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-daemon-embeddable",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.0/633873c93bba12bcf764e1cf8fb36baa5501b8ff/kotlin-daemon-embeddable-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-reflect",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-reflect",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.0/aa2101a19d8688e368ae6e35e8967550ced73884/kotlin-reflect-1.4.0.jar"
+                        },
+                        {
+                            "name": "kotlin-reflect",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.0/7925be59aa7fd1d51c9a274c966acf03d86649f3/kotlin-reflect-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlinx",
+                    "name": "kotlinx-coroutines-core",
+                    "version": "1.3.7",
+                    "artifacts": [
+                        {
+                            "name": "kotlinx-coroutines-core",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.7/17b74f36d80c6bb5102a9fb46611f994e8f7ad23/kotlinx-coroutines-core-1.3.7-sources.jar"
+                        },
+                        {
+                            "name": "kotlinx-coroutines-core",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.7/8e2eb78158638b33793d204ffef0b65c4a578e1c/kotlinx-coroutines-core-1.3.7.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-script-runtime",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-script-runtime",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.0/abc7ecfd92ea677825899180807736acdfbb89b6/kotlin-script-runtime-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-script-runtime",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.0/52ac54a56c9121f54fcca387c5a0f441d1af9be8/kotlin-script-runtime-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-scripting-compiler-impl-embeddable",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-scripting-compiler-impl-embeddable",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.0/b2446c3e97bc1aeb4c5e5565c25393f377827aca/kotlin-scripting-compiler-impl-embeddable-1.4.0.jar"
+                        },
+                        {
+                            "name": "kotlin-scripting-compiler-impl-embeddable",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-impl-embeddable/1.4.0/5b8f86fea035328fc9e8c660773037a3401ce25f/kotlin-scripting-compiler-impl-embeddable-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-stdlib-common",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-stdlib-common",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/a8b4f1baa61d83112d68bb4a3230d58b5972e3c3/kotlin-stdlib-common-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "kotlin-stdlib-common",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.0/1c752cce0ead8d504ccc88a4fed6471fd83ab0dd/kotlin-stdlib-common-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.kotlin",
+                    "name": "kotlin-stdlib",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "kotlin-stdlib",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/63e75298e93d4ae0b299bb869cf0c627196f8843/kotlin-stdlib-1.4.0.jar"
+                        },
+                        {
+                            "name": "kotlin-stdlib",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.0/4a5e4f984e6c3e380f100857f04aba4f3e5fbda8/kotlin-stdlib-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jetbrains.intellij.deps",
+                    "name": "trove4j",
+                    "version": "1.0.20181211",
+                    "artifacts": [
+                        {
+                            "name": "trove4j",
+                            "classifier": "sources",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/fff84a7f9b3215e7ef684672d0adf2853e20040a/trove4j-1.0.20181211-sources.jar"
+                        },
+                        {
+                            "name": "trove4j",
+                            "path": "/home/nchatterjee/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}

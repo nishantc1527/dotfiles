@@ -28,20 +28,27 @@
     "Chatterjee",
     "Gdiffsplit",
     "Lanterna",
+    "Nerdfont",
     "Nishant",
+    "alvan",
+    "artanikin",
     "bclose",
     "bluz",
     "curr",
     "flazz",
     "francoiscabrol",
     "fullscreen",
+    "glepnir",
     "gruvbox",
+    "honza",
+    "jaredgorski",
     "jfinder",
     "jiangmiao",
     "junegunn",
     "mhinz",
     "neoclide",
     "nums",
+    "nvim",
     "pylint",
     "rbgrouleff",
     "sainnhe",
@@ -50,6 +57,16 @@
     "startify",
     "threadsafe",
     "tomasiser",
-    "tpope"
-  ]
+    "tpope",
+    "ultisnips",
+    "vsplit"
+  ],
+  "languageserver": {
+    "kotlin": {
+      "command": "~/.config/nvim/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "filetypes": [
+        "kotlin"
+      ]
+    }
+  }
 }
