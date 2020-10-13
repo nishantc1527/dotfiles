@@ -34,4 +34,4 @@ set undodir=~/.config/nvim/undo
 set undofile
 set updatetime=100
 syntax enable
-colorscheme synthwave84
+colorscheme palenight

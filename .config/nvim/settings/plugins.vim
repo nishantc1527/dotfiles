@@ -64,5 +64,6 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'whatyouhide/vim-gotham'
 Plug 'haishanh/night-owl.vim'
 Plug 'fenetikm/falcon'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
