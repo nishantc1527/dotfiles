@@ -18,9 +18,6 @@ Plug 'camspiers/lens.vim'
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" All the colorschemes you need
-Plug 'flazz/vim-colorschemes'
-
 " Fuzzy Finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -53,16 +50,19 @@ Plug 'preservim/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" Additional Colorschemes
-Plug 'sainnhe/forest-night'
-Plug 'tomasiser/vim-code-dark'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'bluz71/vim-nightfly-guicolors'
+" Colorschemes
+Plug 'flazz/vim-colorschemes'
+Plug 'artanikin/vim-synthwave84'
 Plug 'bluz71/vim-moonfly-colors'
-Plug 'whatyouhide/vim-gotham'
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'connorholyday/vim-snazzy'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'glepnir/oceanic-material'
 Plug 'jaredgorski/spacecamp'
-Plug 'artanikin/vim-synthwave84'
-Plug 'connorholyday/vim-snazzy'
+Plug 'sainnhe/forest-night'
+Plug 'tomasiser/vim-code-dark'
+Plug 'whatyouhide/vim-gotham'
+Plug 'haishanh/night-owl.vim'
+Plug 'fenetikm/falcon'
 
 call plug#end()

@@ -18,7 +18,7 @@ nnoremap <c-o> o<esc>
 nnoremap / :Lines<cr>
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
-nnoremap <leader>q :bdelete<cr>
+nnoremap <leader>q :Bclose<cr>
 
 vnoremap < <gv
 vnoremap > >gv
