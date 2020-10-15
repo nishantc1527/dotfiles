@@ -1,3 +1,4 @@
+colorscheme palenight
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set autoindent
 set background=dark
@@ -34,4 +35,3 @@ set undodir=~/.config/nvim/undo
 set undofile
 set updatetime=100
 syntax enable
-colorscheme palenight

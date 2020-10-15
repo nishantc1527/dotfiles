@@ -15,7 +15,7 @@ Plug 'alvan/vim-closetag'
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
 
-" Autocomplete
+" Language Server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Fuzzy Finding
@@ -65,5 +65,7 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'haishanh/night-owl.vim'
 Plug 'fenetikm/falcon'
 Plug 'sainnhe/sonokai'
+Plug 'joshdick/onedark.vim'
+Plug 'relastle/bluewery.vim'
 
 call plug#end()
