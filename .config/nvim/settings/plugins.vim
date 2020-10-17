@@ -4,9 +4,6 @@ call plug#begin("~/.config/nvim/plugged")
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Auto Format
-Plug 'chiel92/vim-autoformat'
-
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
@@ -42,30 +39,21 @@ Plug 'puremourning/vimspector'
 " Linting
 Plug 'dense-analysis/ale'
 
-" Nerd Plugins
-Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
+" Comment Stuff
+Plug 'tpope/vim-commentary'
 
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" Fast Finding
+Plug 'unblevable/quick-scope'
+
+" Floating Terminal
+Plug 'voldikss/vim-floaterm'
+
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
-Plug 'artanikin/vim-synthwave84'
-Plug 'bluz71/vim-moonfly-colors'
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'connorholyday/vim-snazzy'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'glepnir/oceanic-material'
-Plug 'jaredgorski/spacecamp'
-Plug 'sainnhe/forest-night'
-Plug 'tomasiser/vim-code-dark'
-Plug 'whatyouhide/vim-gotham'
-Plug 'haishanh/night-owl.vim'
-Plug 'fenetikm/falcon'
-Plug 'sainnhe/sonokai'
-Plug 'joshdick/onedark.vim'
-Plug 'relastle/bluewery.vim'
 
 call plug#end()

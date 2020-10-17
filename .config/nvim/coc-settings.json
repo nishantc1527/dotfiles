@@ -1,31 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "markdown",
-    "javascript",
-    "graphql",
-    "html",
-    "yaml",
-    "json",
-    "python",
-    "java",
-    "rust"
-  ],
-  // explorer
-  "explorer.width": 30,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
-    "<cr>": [
-      "expandable?",
-      "expand",
-      "open"
-    ],
-    "v": "open:vsplit"
-  },
+  "coc.preferences.formatOnSaveFiletypes": ["json", "python", "java", "rust"],
   "cSpell.userWords": [
     "Arial",
+    "Behaviour",
     "Chatterjee",
+    "Floaterm",
     "Gdiffsplit",
     "Lanterna",
     "Nerdfont",
@@ -40,12 +19,14 @@
     "flazz",
     "francoiscabrol",
     "fullscreen",
+    "ghifarit",
     "glepnir",
     "gruvbox",
     "haishanh",
     "honza",
     "inoremap",
     "jaredgorski",
+    "javac",
     "jfinder",
     "jiangmiao",
     "junegunn",
@@ -68,15 +49,16 @@
     "tomasiser",
     "tpope",
     "ultisnips",
+    "unblevable",
     "vnoremap",
-    "vsplit"
+    "voldikss",
+    "vsplit",
+    "youcompleteme"
   ],
   "languageserver": {
     "kotlin": {
       "command": "~/.config/nvim/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
-      "filetypes": [
-        "kotlin"
-      ]
+      "filetypes": ["kotlin"]
     }
   }
 }

@@ -9,7 +9,7 @@ inoremap <right> <nop>
 
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
-nnoremap <leader>s :split<cr>:terminal<cr>$a
+nnoremap <leader>s :FloatermNew<cr>
 nnoremap <leader>h <c-w>h
 nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
