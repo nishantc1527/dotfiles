@@ -1,11 +1,20 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["json", "python", "java", "rust"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "python",
+    "java",
+    "rust",
+    "kotlin",
+    "markdown"
+  ],
   "cSpell.userWords": [
     "Arial",
     "Behaviour",
     "Chatterjee",
+    "Fizzbuzz",
     "Floaterm",
     "Gdiffsplit",
+    "Guarenteed",
     "Lanterna",
     "Nerdfont",
     "Nishant",
@@ -37,6 +46,7 @@
     "nnoremap",
     "nums",
     "nvim",
+    "occured",
     "pylint",
     "rbgrouleff",
     "relastle",
@@ -45,6 +55,7 @@
     "sheerun",
     "sonokai",
     "startify",
+    "stoi",
     "threadsafe",
     "tomasiser",
     "tpope",

@@ -6,6 +6,8 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+inoremap <c-j> <esc>ja
+inoremap <c-k> <esc>ka
 
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>

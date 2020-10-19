@@ -52,8 +52,10 @@ Plug 'unblevable/quick-scope'
 " Floating Terminal
 Plug 'voldikss/vim-floaterm'
 
-" Colorschemes
-Plug 'flazz/vim-colorschemes'
-Plug 'drewtempelmeyer/palenight.vim'
+" Dracula Colorscheme
+Plug 'dracula/vim'
+
+" Tagbar
+Plug 'preservim/tagbar'
 
 call plug#end()
