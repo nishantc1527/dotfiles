@@ -8,9 +8,7 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# This guy is good https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c. I copied lots of things from him.
-
-neofetch | lolcat
+neofetch
 
 . ~/.fancy-git/prompt.sh
 
@@ -22,26 +20,20 @@ for elem in {c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}
 do alias $elem="clear"
 done
 
-alias :q="exit"
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../..'
 alias .....='cd ../../..'
 alias ......='cd ../../..'
 alias .......='cd ../../../..'
-alias ........='cd ../../../../..'
+alias ........='cd ../../../..'
 
-alias ls='ls -lA | lolcat'
+alias ls='ls -lA'
 
 alias sl='ls'
 alias dc='cd'
 
 alias cls="clear"
-
-alias date='date "+%Y-%m-%d %A %T %Z" | lolcat'
-alias ps='ps | lolcat'
-alias cal='cal | lolcat'
 
 alias add='git add .'
 alias branch='git branch'
@@ -64,8 +56,8 @@ set -o vi
 
 alias pip="pip3"
 
-alias i=$'yes | sudo pacman -Sy $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep -v installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Sii {}\")'
-alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | grep installed | awk \'{print $1;}\' | sort | fzf -m --preview=\"pacman -Sii {}\")'
+alias i=$'yes | sudo pacman -Syu $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi | awk \'{print $1;}\' | sort)'
+alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi | awk \'{print $1;}\' | sort)'
 alias g="cd \$(~/dirs.py | fzf)"
 alias gg="cd \$(~/home-dirs.py | fzf)"
 alias v="vim \$(fzf)"
@@ -83,4 +75,6 @@ export VISUAL="nvim"
 
 alias gw="./gradlew"
 
-alias rm="sudo trash"
+alias vimb="vimb google.com"
+
+alias cat="bat"

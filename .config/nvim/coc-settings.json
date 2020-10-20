@@ -5,7 +5,8 @@
     "java",
     "rust",
     "kotlin",
-    "markdown"
+    "markdown",
+    "groovy"
   ],
   "cSpell.userWords": [
     "Arial",
@@ -18,6 +19,7 @@
     "Lanterna",
     "Nerdfont",
     "Nishant",
+    "Yggdroot",
     "alvan",
     "artanikin",
     "bclose",
@@ -32,6 +34,7 @@
     "glepnir",
     "gruvbox",
     "haishanh",
+    "hdiniz",
     "honza",
     "inoremap",
     "jaredgorski",
@@ -56,6 +59,7 @@
     "sonokai",
     "startify",
     "stoi",
+    "testfiles",
     "threadsafe",
     "tomasiser",
     "tpope",
