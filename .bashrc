@@ -28,7 +28,7 @@ alias ......='cd ../../..'
 alias .......='cd ../../../..'
 alias ........='cd ../../../..'
 
-alias ls='ls -lA'
+alias ls='ls -lA --color=always'
 
 alias sl='ls'
 alias dc='cd'
@@ -47,6 +47,7 @@ alias reset='git reset'
 alias restore="git restore"
 alias revert="git revert"
 alias status='git status'
+alias show='git show'
 
 alias tree="tree -C"
 
@@ -78,3 +79,5 @@ alias gw="./gradlew"
 alias vimb="vimb google.com"
 
 alias cat="bat"
+
+alias android="emulator -avd \"\$(emulator -list-avds)\""
