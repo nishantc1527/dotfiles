@@ -33,9 +33,6 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Debugging
-Plug 'puremourning/vimspector'
-
 " Linting
 Plug 'dense-analysis/ale'
 
@@ -49,13 +46,38 @@ Plug 'honza/vim-snippets'
 " Fast Finding
 Plug 'unblevable/quick-scope'
 
-" Floating Terminal
-Plug 'voldikss/vim-floaterm'
-
 " Dracula Colorscheme
 Plug 'dracula/vim'
 
-" Tagbar
+" Tag Finding
 Plug 'preservim/tagbar'
+
+" Indent Guides
+Plug 'Yggdroot/indentLine'
+
+" Low Distraction Mode
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" Smooth Scrolling
+Plug 'psliwka/vim-smoothie'
+
+" This Colorscheme Is Pretty Awesome But I Don't Use It
+Plug 'sainnhe/edge'
+
+" Gradle Integration
+Plug 'hdiniz/vim-gradle'
+
+" Change Working Directory
+Plug 'airblade/vim-rooter'
+
+" Auto Formatter For Ruby
+Plug 'ruby-formatter/rufo-vim'
+
+" Change Surrounding Characters
+Plug 'tpope/vim-surround'
+
+" Vim Developement
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()

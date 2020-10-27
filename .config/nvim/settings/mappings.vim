@@ -11,7 +11,7 @@ inoremap <c-k> <esc>ka
 
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
-nnoremap <leader>s :FloatermNew<cr>
+nnoremap <leader>s :enew<cr>:terminal<cr>a
 nnoremap <leader>h <c-w>h
 nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
@@ -21,6 +21,7 @@ nnoremap / :Lines<cr>
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprevious<cr>
 nnoremap <leader>q :Bclose<cr>
+nnoremap <leader>d :Goyo<cr>:Limelight!!<cr>
 
 vnoremap < <gv
 vnoremap > >gv
