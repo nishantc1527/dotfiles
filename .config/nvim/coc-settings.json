@@ -114,7 +114,7 @@
   ],
   "languageserver": {
     "kotlin": {
-      "command": "~/.config/nvim/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "command": "~/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]
     }
   }
