@@ -1,3 +1,0 @@
-2020.10.21 18:41:48 INFO  started: Metals version 0.9.4 in workspace '/home/nchatterjee/.config/nvim/settings' .
-2020.10.21 18:41:50 INFO  time: initialize in 2.25s
-2020.10.21 18:41:51 WARN  no build tool detected in workspace '/home/nchatterjee/.config/nvim/settings'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
