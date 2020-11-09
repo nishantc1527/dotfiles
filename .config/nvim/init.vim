@@ -4,6 +4,8 @@
 
     let mapleader = " "
 
+  " {{{ LEADER KEY END }}}
+
   " {{{ INSERT MODE }}}
 
     inoremap jk <esc>
@@ -14,6 +16,8 @@
     inoremap <right> <nop>
     inoremap <c-j> <esc>ja
     inoremap <c-k> <esc>ka
+
+  " {{{ INSERT MODE END }}}
 
   " {{{ NORMAL MODE }}}
 
@@ -30,15 +34,21 @@
     nnoremap <leader>q :Bclose<cr>
     nnoremap <leader>d :Goyo<cr>:Limelight!!<cr>
 
+  " {{{ NORMAL MODE END }}}
+
   " {{{ VISUAL MODE }}}
 
     vnoremap < <gv
     vnoremap > >gv
     vnoremap <leader>s :sort<cr>
 
+  " {{{ VISUAL MODE END }}}
+
   " {{{ TERMINAL MODE }}}
 
-    tnoremap jk <c-\><c-n>:FloatermToggle<cr>
+    tnoremap <c-t> <c-\><c-n>:FloatermToggle<cr>
+
+  " {{{ TERMINAL MODE END }}}
 
 " {{{ PLUGINS }}}
 
@@ -62,6 +72,8 @@
 
     " Dracula Colorscheme
     Plug 'dracula/vim'
+
+  " {{{ AESTHETICS END }}}
 
   " {{{ PRODUCTIVITY }}}
 
@@ -129,7 +141,15 @@
     " Floating Terminal
     Plug 'voldikss/vim-floaterm'
 
+    " Rainbow Brackets
+    Plug 'luochen1990/rainbow'
+
+  " {{{ PRODUCTIVITY END }}}
+
   call plug#end()
+
+" {{{ PLUGINS END }}}
+
 " {{{ PLUGIN CONFIGURATION }}}
 
   " {{{ AIRLINE }}}
@@ -178,6 +198,8 @@
     let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
     let g:airline#extensions#tagbar#enabled = 0
 
+  " {{{ AIRLINE END }}}
+
   " {{{ ALE }}}
 
     let g:ale_echo_msg_error_str = 'E'	
@@ -196,12 +218,16 @@
           \ 'rust': ['cargo', 'rustc', 'rustfmt']	
           \ }
 
+  " {{{ ALE END }}}
+
   " {{{ CLOSETAG }}}
 
     let g:closetag_filenames = '*.xml'
     let g:closetag_xhtml_filenames = '*.xml'
     let g:closetag_filetypes = 'xml'
     let g:closetag_xhtml_filetypes = 'xml'
+
+  " {{{ CLOSETAG END }}}
 
   " {{{ COC }}}
 
@@ -216,13 +242,6 @@
       return !col || getline('.')[col - 1]  =~ '\s'
     endfunction
 
-    " Use <c-space> to trigger completion.
-    if has('nvim')
-      inoremap <silent><expr> <c-space> coc#refresh()
-    else
-      inoremap <silent><expr> <c-@> coc#refresh()
-    endif
-
     " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
     " position. Coc only does snippet and additional edit on confirm.
     " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
@@ -232,30 +251,21 @@
       inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     endif
 
-    " Use `[g` and `]g` to navigate diagnostics
+    " Use `[` and `]` to navigate diagnostics
     " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-    nmap <silent> [g <Plug>(coc-diagnostic-prev)
-    nmap <silent> ]g <Plug>(coc-diagnostic-next)
+    nmap <silent> [ <Plug>(coc-diagnostic-prev)
+    nmap <silent> ] <Plug>(coc-diagnostic-next)
 
     " GoTo code navigation.
     nmap <silent> <leader>ld <Plug>(coc-definition)
     nmap <silent> <leader>lr <Plug>(coc-references)
 
-    " Use K to show documentation in preview window.
-    nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
-    function! s:show_documentation()
-      if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-      else
-        call CocActionAsync('doHover')
-      endif
-    endfunction
-
     " Highlight the symbol and its references when holding the cursor.
     autocmd CursorHold * silent call CocActionAsync('highlight')
 
     " Symbol renaming.
-    nnoremap <silent> <leader>rn <Plug>(coc-rename)
+    nmap <leader>rn <Plug>(coc-rename)
+
     augroup mygroup
       autocmd!
       " Setup formatexpr specified filetype(s).
@@ -264,72 +274,15 @@
       autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
     augroup end
 
-    " Applying codeAction to the selected region.
-    " Example: `<leader>aap` for current paragraph
-    xmap <leader>a  <Plug>(coc-codeaction-selected)
-    nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-    " Remap keys for applying codeAction to the current buffer.
-    nmap <leader>ac  <Plug>(coc-codeaction)
-
-    " Apply AutoFix to problem on the current line.
-    nmap <leader>qf  <Plug>(coc-fix-current)
-
-    " Map function and class text objects
-    " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-    xmap <leader>if <Plug>(coc-funcobj-i)
-    omap <leader>if <Plug>(coc-funcobj-i)
-    xmap <leader>af <Plug>(coc-funcobj-a)
-    omap <leader>af <Plug>(coc-funcobj-a)
-    xmap <leader>ic <Plug>(coc-classobj-i)
-    omap <leader>ic <Plug>(coc-classobj-i)
-    xmap <leader>ac <Plug>(coc-classobj-a)
-    omap <leader>ac <Plug>(coc-classobj-a)
-
-    " Use CTRL-S for selections ranges.
-    " Requires 'textDocument/selectionRange' support of language server.
-    nmap <silent> <C-s> <Plug>(coc-range-select)
-    xmap <silent> <C-s> <Plug>(coc-range-select)
-
-    " Add `:Format` command to format current buffer.
-    command! -nargs=0 Format :call CocAction('format')
-
-    " Add `:Fold` command to fold current buffer.
-    command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-    " Add `:OR` command for organize imports of the current buffer.
-    command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-    " Mappings for CoCList
-    " Show all diagnostics.
-    nnoremap <silent><nowait> ,a  :<C-u>CocList diagnostics<cr>
-
-    " Manage extensions.
-    nnoremap <silent><nowait> ,e  :<C-u>CocList extensions<cr>
-
-    " Show commands.
-    nnoremap <silent><nowait> ,c  :<C-u>CocList commands<cr>
-
-    " Find symbol of current document.
-    nnoremap <silent><nowait> ,o  :<C-u>CocList outline<cr>
-
-    " Search workspace symbols.
-    nnoremap <silent><nowait> ,s  :<C-u>CocList -I symbols<cr>
-
-    " Do default action for next item.
-    nnoremap <silent><nowait> ,j  :<C-u>CocNext<CR>
-
-    " Do default action for previous item.
-    nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
-
-    " Resume latest coc list.
-    nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
     inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
     nnoremap <m-cr> :CocCommand actions.open<cr>
+
+  " {{{ COC END }}}
 
   " {{{ FUGITIVE }}}
 
@@ -339,30 +292,42 @@
     nnoremap <leader>gf :diffget //2<cr>
     nnoremap <leader>gj :diffget //3<cr>
 
+  " {{{ FUGITIVE END }}}
+
   " {{{ FZF }}}
 
     nnoremap <leader>F :Files<cr>
     nnoremap <leader>B :Buffers<cr>
 
+  " {{{ FZF END }}}
+
   " {{{ INDENT LINE }}}
-  "
+
     let g:indentLine_color_term = 6
     let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     let g:indentLine_setConceal = 1
     let g:indentLine_conceallevel = 1
     let g:indentLine_concealcursor = ""
 
+  " {{{ INDENT LINE END }}}
+
   " {{{ RANGER }}}
 
     let g:ranger_replace_netrw = 1
+
+  " {{{ RANGER END }}}
 
   " {{{ RUFO }}}
 
     let g:rufo_auto_formatting = 1
 
+  " {{{ RUFO END }}}
+
   " {{{ TAGBAR }}}
 
     nnoremap <leader>p :TagbarToggle<cr>
+
+  " {{{ TAGBAR END }}}
 
   " {{{ ULTISNIPS }}}
 
@@ -370,6 +335,8 @@
     let g:UltiSnipsJumpForwardTrigger="<c-b>"
     let g:UltiSnipsJumpBackwardTrigger="<c-z>"
     let g:UltiSnipsEditSplit="vertical"
+
+  " {{{ ULTISNIPS END }}}
 
   " {{{ VIM GO }}}
 
@@ -387,30 +354,39 @@
           autocmd FileType go nnoremap <leader>bo :GoDebugStepOut<cr>
     augroup END
 
+  " {{{ VIM GO END }}}
+
+  " {{{ RAINBOW }}}
+
+    let g:rainbow_active = 1
+
+  " {{{ RAINBOW END }}}
+
 " {{{ GENERAL SETTINGS }}}
 
-  colorscheme dracula
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  set autoindent
-  set background=dark
-  set clipboard=unnamedplus
+  autocmd CursorMoved * normal zz
+  colorscheme dracula " Dracula coloscheme is awesome
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable true color
+  set autoindent " Automatically indent
+  set background=dark " Set dark background
+  set clipboard=unnamedplus " Copy and paste into other programs
   set cmdheight=2
-  set encoding=utf-8
-  set expandtab
-  set fileencoding=utf-8
+  set encoding=utf-8 " Set encoding as utf8
+  set expandtab " Change tabs to spaces
+  set fileencoding=utf-8 " Set file encoding as utf8
   set formatoptions-=cro
   set hidden
-  set incsearch
+  set incsearch " Incremental search
   set iskeyword+=-
   set nobackup
   set nohlsearch
   set noicon
   set noswapfile
   set notitle
-  set nowrap
+  set nowrap " Don't wrap lines
   set nowritebackup
   set pumheight=10
-  set relativenumber number
+  set relativenumber number " Relative Line Numbers
   set shiftwidth=2
   set shortmess+=c
   set showtabline=2
@@ -426,3 +402,5 @@
   set undofile
   set updatetime=100
   syntax enable
+
+" {{{ GENERAL SETTINGS END }}}
