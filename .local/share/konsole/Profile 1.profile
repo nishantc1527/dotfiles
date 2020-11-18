@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=klorax.retrofuturism-transparent
+ColorScheme=Dracula
 
 [General]
 Name=Profile 1
