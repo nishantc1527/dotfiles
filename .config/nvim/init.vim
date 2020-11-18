@@ -9,7 +9,6 @@
   " {{{ INSERT MODE }}}
 
     inoremap jk <esc>
-    inoremap <esc> <nop>
     inoremap <up> <nop>
     inoremap <down> <nop>
     inoremap <left> <nop>
@@ -22,7 +21,6 @@
   " {{{ NORMAL MODE }}}
 
     nnoremap <leader>ev :e $MYVIMRC<cr>
-    nnoremap <leader>s :FloatermToggle<cr>
     nnoremap <leader>h <c-w>h
     nnoremap <leader>j <c-w>j
     nnoremap <leader>k <c-w>k
@@ -43,12 +41,6 @@
     vnoremap <leader>s :sort<cr>
 
   " {{{ VISUAL MODE END }}}
-
-  " {{{ TERMINAL MODE }}}
-
-    tnoremap <c-t> <c-\><c-n>:FloatermToggle<cr>
-
-  " {{{ TERMINAL MODE END }}}
 
 " {{{ PLUGINS }}}
 
@@ -73,9 +65,18 @@
     " Dracula Colorscheme
     Plug 'dracula/vim'
 
+    " Dev Icons
+    Plug 'ryanoasis/vim-devicons'
+
   " {{{ AESTHETICS END }}}
 
   " {{{ PRODUCTIVITY }}}
+
+    " Linting
+    Plug 'vim-syntastic/syntastic'
+
+    " Rust Developement
+    Plug 'rust-lang/rust.vim'
 
     " Auto Pairs
     Plug 'jiangmiao/auto-pairs'
@@ -99,12 +100,13 @@
     Plug 'francoiscabrol/ranger.vim'
     Plug 'rbgrouleff/bclose.vim'
 
+    " Nerd Tree
+    Plug 'preservim/nerdtree'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
     " Git Integration
     Plug 'tpope/vim-fugitive'
     Plug 'airblade/vim-gitgutter'
-
-    " Linting
-    Plug 'dense-analysis/ale'
 
     " Comment Stuff
     Plug 'tpope/vim-commentary'
@@ -113,8 +115,9 @@
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
-    " Fast Finding
+    " Better Finding
     Plug 'unblevable/quick-scope'
+    Plug 'rhysd/clever-f.vim'
 
     " Tag Finding
     Plug 'preservim/tagbar'
@@ -150,8 +153,26 @@
 
 " {{{ PLUGINS END }}}
 
-" {{{ PLUGIN CONFIGURATION }}}
+" {{{ PLUG CONFIG }}}
 
+  " {{{ SYNTASTIC }}}
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+    let g:syntastic_java_checkers=['javac']
+    let g:syntastic_java_javac_config_file_enabled = 1
+
+  " {{{ SYNTASTIC END }}}
+
+  " {{{ NERD TREE }}}
+
+    nnoremap <leader>t :NERDTreeToggle<cr>
+
+  " {{{ NERD TREE END }}}
+  
   " {{{ AIRLINE }}}
     
     " Set The Airline Theme
@@ -165,30 +186,17 @@
           let g:airline_symbols = {}
     endif
 
-    " Unicode Symbols
-    let g:airline_left_sep = '»'
-    let g:airline_left_sep = '▶'
-    let g:airline_right_sep = '«'
-    let g:airline_right_sep = '◀'
-    let g:airline_symbols.linenr = '␊'
-    let g:airline_symbols.linenr = '␤'
     let g:airline_symbols.linenr = '¶'
     let g:airline_symbols.branch = '⎇'
-    let g:airline_symbols.paste = 'ρ'
-    let g:airline_symbols.paste = 'Þ'
     let g:airline_symbols.paste = '∥'
     let g:airline_symbols.whitespace = 'Ξ'
-
-    " Airline Symbols
-    let g:airline_left_sep = ''
-    let g:airline_left_alt_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_right_alt_sep = ''
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ')'
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = '('
     let g:airline_symbols.branch = ''
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
-
-    " Configure The Tabline
     let g:airline#extensions#tmuxline#enabled = 0
     let g:airline#extensions#neomake#enabled = 1
     let g:airline#extensions#tabline#enabled = 1
@@ -199,26 +207,6 @@
     let g:airline#extensions#tagbar#enabled = 0
 
   " {{{ AIRLINE END }}}
-
-  " {{{ ALE }}}
-
-    let g:ale_echo_msg_error_str = 'E'	
-    let g:ale_echo_msg_warning_str = 'W'	
-    let g:ale_sign_error = '✘'	
-    let g:ale_sign_warning = '⚠'	
-    
-    let g:ale_open_list = 0	
-    let g:ale_loclist = 0	
-    
-    let g:ale_linters = {	
-          \  'python': ['pylint'],	
-          \  'java': ['javac'],	
-          \ 'sh': ['shellcheck'],	
-          \ 'cpp': ['clang', 'gcc'],	
-          \ 'rust': ['cargo', 'rustc', 'rustfmt']	
-          \ }
-
-  " {{{ ALE END }}}
 
   " {{{ CLOSETAG }}}
 
@@ -280,7 +268,7 @@
     inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-    nnoremap <m-cr> :CocCommand actions.open<cr>
+    nnoremap <m-cr> :CocAction<cr>
 
   " {{{ COC END }}}
 
@@ -296,8 +284,7 @@
 
   " {{{ FZF }}}
 
-    nnoremap <leader>F :Files<cr>
-    nnoremap <leader>B :Buffers<cr>
+    nnoremap <c-p> :Files<cr>
 
   " {{{ FZF END }}}
 
@@ -362,6 +349,8 @@
 
   " {{{ RAINBOW END }}}
 
+" {{{ PLUG CONFIG END }}}
+
 " {{{ GENERAL SETTINGS }}}
 
   autocmd CursorMoved * normal zz
@@ -404,3 +393,25 @@
   syntax enable
 
 " {{{ GENERAL SETTINGS END }}}
+
+" {{{ CREATE TERMINALS }}}
+
+  function SpringTerms()
+    execute "FloatermNew --name=sql mysql -u root -p"
+    execute "FloatermHide"
+
+    nnoremap <leader>s :FloatermShow sql<cr>
+    tnoremap <c-t> <c-\><c-n>:FloatermToggle<cr>
+
+    execute "FloatermNew --name=run"
+    execute "FloatermHide"
+    nnoremap <leader>r :FloatermSend --name=run ./gradlew bootRun<cr>:FloatermShow run<cr>
+  endfunction
+
+  function GradeTerms()
+    execute "FloatermNew"
+    execute "FloatermHide"
+    nnoremap <leader>s :FloatermSend ./gradlew build<cr>:FloatermShow<cr>
+  endfunction
+ 
+" {{{ CREATE TERMINALS END }}}

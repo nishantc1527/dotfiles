@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 neofetch
@@ -63,8 +62,8 @@ alias pip="pip3"
 
 alias i=$'yes | sudo pacman -Syu $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
 alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
-alias h="\$(history | awk '{\$1 = \"\"; print \$0}' | fzf --tac --no-sort)"
-alias x="\$(compgen -c | sort -u | fzz)"
+alias h="\$(history | awk '{\$1 = \"\"; print \$0}' | fzf)"
+alias x="\$(compgen -c | sort -u | fzf)"
 alias g="cd \$(~/dirs.py | fzf)"
 alias gg="cd \$(~/home-dirs.py | fzf)"
 alias v="vim \$(fzf)"
@@ -90,3 +89,8 @@ alias android="emulator -avd \"\$(emulator -list-avds)\""
 alias shut="shutdown -h now"
 alias google-chrome="google-chrome-stable"
 alias mysql="mysql -u root -p"
+
+alias grep="grep --color=auto"
+alias ip='ip -color=auto'
+
+alias get="go get"

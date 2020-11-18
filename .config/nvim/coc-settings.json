@@ -46,12 +46,15 @@
     "ervandew",
     "fatih",
     "fenetikm",
+    "firenvim",
     "flazz",
+    "flrnd",
     "francoiscabrol",
     "fullscreen",
     "funcobj",
     "ghifarit",
     "gitgutter",
+    "glacambre",
     "glepnir",
     "glfw",
     "godlygeek",
@@ -111,6 +114,7 @@
     "tcomment",
     "testfiles",
     "threadsafe",
+    "tiagofumo",
     "tomasiser",
     "tpope",
     "ultisnips",
@@ -125,7 +129,7 @@
   ],
   "languageserver": {
     "kotlin": {
-      "command": "~/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "command": "kotlin-language-server",
       "filetypes": ["kotlin"]
     }
   }
