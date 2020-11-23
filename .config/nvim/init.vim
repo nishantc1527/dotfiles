@@ -13,8 +13,6 @@
     inoremap <down> <nop>
     inoremap <left> <nop>
     inoremap <right> <nop>
-    inoremap <c-j> <esc>ja
-    inoremap <c-k> <esc>ka
 
   " {{{ INSERT MODE END }}}
 
@@ -30,7 +28,6 @@
     nnoremap <tab> :bnext<cr>
     nnoremap <s-tab> :bprevious<cr>
     nnoremap <leader>q :Bclose<cr>
-    nnoremap <leader>d :Goyo<cr>:Limelight!!<cr>
 
   " {{{ NORMAL MODE END }}}
 
@@ -46,106 +43,41 @@
 
   call plug#begin("~/.config/nvim/plugged")
 
-  " {{{ AESTHETICS }}}
-
-    " Good Looking Status Line
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-
-    " Fancy Start Screen
-    Plug 'mhinz/vim-startify'
-
-    " Other Colorschemes
-    Plug 'sainnhe/edge'
-    Plug 'sainnhe/forest-night'
-
-    " Indent Guides
+    Plug 'dense-analysis/ale'
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/echodoc.vim'
+    Plug 'SirVer/ultisnips'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'Yggdroot/indentLine'
-
-    " Dracula Colorscheme
-    Plug 'dracula/vim'
-
-    " Dev Icons
-    Plug 'ryanoasis/vim-devicons'
-
-  " {{{ AESTHETICS END }}}
-
-  " {{{ PRODUCTIVITY }}}
-
-    " Linting
-    Plug 'vim-syntastic/syntastic'
-
-    " Rust Developement
-    Plug 'rust-lang/rust.vim'
-
-    " Auto Pairs
-    Plug 'jiangmiao/auto-pairs'
+    Plug 'airblade/vim-gitgutter'
     Plug 'alvan/vim-closetag'
-
-    " Automatic Window Resizing
-    Plug 'camspiers/animate.vim'
-    Plug 'camspiers/lens.vim'
-
-    " Language Server
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-    " Fuzzy Finding
+    Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+    Plug 'dracula/vim'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'francoiscabrol/ranger.vim'
+    Plug 'hdiniz/vim-gradle'
+    Plug 'honza/vim-snippets'
+    Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-
-    " Language Pack
-    Plug 'sheerun/vim-polyglot'
-
-    " Ranger Integration
-    Plug 'francoiscabrol/ranger.vim'
-    Plug 'rbgrouleff/bclose.vim'
-
-    " Nerd Tree
-    Plug 'preservim/nerdtree'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-    " Git Integration
-    Plug 'tpope/vim-fugitive'
-    Plug 'airblade/vim-gitgutter'
-
-    " Comment Stuff
-    Plug 'tpope/vim-commentary'
-
-    " Snippets
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
-
-    " Better Finding
-    Plug 'unblevable/quick-scope'
-    Plug 'rhysd/clever-f.vim'
-
-    " Tag Finding
-    Plug 'preservim/tagbar'
-
-    " Low Distraction Mode
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/limelight.vim'
-
-    " Smooth Scrolling
-    Plug 'psliwka/vim-smoothie'
-
-    " Gradle Integration
-    Plug 'hdiniz/vim-gradle'
-
-    " Auto Formatter For Ruby
-    Plug 'ruby-formatter/rufo-vim'
-
-    " Change Surrounding Characters
-    Plug 'tpope/vim-surround'
-
-    " Go Developement
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-    " Floating Terminal
-    Plug 'voldikss/vim-floaterm'
-
-    " Rainbow Brackets
     Plug 'luochen1990/rainbow'
+    Plug 'mhinz/vim-startify'
+    Plug 'preservim/nerdtree'
+    Plug 'rbgrouleff/bclose.vim'
+    Plug 'ruby-formatter/rufo-vim'
+    Plug 'rust-lang/rust.vim'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'unblevable/quick-scope'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'voldikss/vim-floaterm'
 
   " {{{ PRODUCTIVITY END }}}
 
@@ -155,33 +87,110 @@
 
 " {{{ PLUG CONFIG }}}
 
-  " {{{ SYNTASTIC }}}
+  " {{{ QUICKSCOPE }}}
 
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
+    let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-    let g:syntastic_java_checkers=['javac']
-    let g:syntastic_java_javac_config_file_enabled = 1
+  " {{{ QUICKSCOPE END }}}
 
-  " {{{ SYNTASTIC END }}}
+  " {{{ GOYO }}}
+    
+    nnoremap <leader>d :Goyo<cr>:Limelight!!<cr>
+
+  " {{{ GOYO END }}}
+
+  " {{{ LSP }}}
+
+    let g:LanguageClient_autoStart = 1
+
+    let g:LanguageClient_serverCommands = {
+      \ 'rust': ['rls'],
+      \ 'java': ['jdtls'],
+      \ 'go': ['gopls']
+      \ }
+
+    let g:deoplete#enable_at_startup = 1
+    set completeopt=longest,menuone,preview
+    set completeopt-=preview
+
+    let g:deoplete#custom#var = {}
+    let g:deoplete#custom#var.javascript = [
+          \ 'tern#Complete',
+          \ 'jspc#omni',
+          \ 'javascriptcomplete#CompleteJS'
+          \ ]
+
+    call deoplete#custom#option({
+          \ 'ignore_sources': {
+          \ '_': ['around']
+          \ },
+          \ 'sources': {
+          \ 'javascript': ['file', 'ternjs'],
+          \ 'php': ['phpactor', 'ultisnips']
+          \ },
+          \ })
+
+    inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ deoplete#mappings#manual_complete()
+
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~ '\s'
+    endfunction
+
+    inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
+    
+    nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
+    nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
+    nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+    nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
+    nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
+    nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
+    nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+    nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+
+    let g:echodoc#enable_at_startup = 1
+    let g:echodoc#type = 'signature'
+
+    " {{{ LSP END }}}
+
+  " {{{ ALE }}}
+
+    let g:ale_echo_msg_error_str = 'E'		
+    let g:ale_echo_msg_warning_str = 'W'		
+    let g:ale_sign_error = '✘'		
+    let g:ale_sign_warning = '⚠'		
+
+    let g:ale_open_list = 0		
+    let g:ale_loclist = 0		
+
+    let g:ale_linters = {		
+          \  'python': ['pylint'],		
+          \  'java': ['javac'],		
+          \ 'sh': ['shellcheck'],		
+          \ 'cpp': ['clang', 'gcc'],		
+          \ 'rust': ['cargo', 'rustc', 'rustfmt']		
+          \ }	
+
+  " {{{ ALE END }}}
 
   " {{{ NERD TREE }}}
 
-    nnoremap <leader>t :NERDTreeToggle<cr>
+    let g:NERDTreeGitStatusUseNerdFonts = 1
+    let g:NERDTreeGitStatusShowIgnored = 1
+    nnoremap <leader>t :NERDTreeTabsToggle<cr>
 
   " {{{ NERD TREE END }}}
   
   " {{{ AIRLINE }}}
     
-    " Set The Airline Theme
     let g:airline_theme = "dracula"
-
-    " Use Powerline Fonts
     let g:airline_powerline_fonts = 1
 
-    " Initialize Airline Symbols
     if !exists('g:airline_symbols')
           let g:airline_symbols = {}
     endif
@@ -200,8 +209,8 @@
     let g:airline#extensions#tmuxline#enabled = 0
     let g:airline#extensions#neomake#enabled = 1
     let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
-    let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+    let g:airline#extensions#tabline#show_buffers = 1
+    let g:airline#extensions#tabline#tab_nr_type = 1
     let g:airline#extensions#tabline#formatter = 'unique_tail'
     let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
     let g:airline#extensions#tagbar#enabled = 0
@@ -216,61 +225,6 @@
     let g:closetag_xhtml_filetypes = 'xml'
 
   " {{{ CLOSETAG END }}}
-
-  " {{{ COC }}}
-
-    inoremap <silent><expr> <Tab>
-          \ pumvisible() ? "\<C-n>" :
-          \ <SID>check_back_space() ? "\<Tab>" :
-          \ coc#refresh()
-
-    " use <tab> for trigger completion and navigate to the next complete item
-    function! s:check_back_space() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~ '\s'
-    endfunction
-
-    " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-    " position. Coc only does snippet and additional edit on confirm.
-    " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-    if exists('*complete_info')
-      inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-    else
-      inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-    endif
-
-    " Use `[` and `]` to navigate diagnostics
-    " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-    nmap <silent> [ <Plug>(coc-diagnostic-prev)
-    nmap <silent> ] <Plug>(coc-diagnostic-next)
-
-    " GoTo code navigation.
-    nmap <silent> <leader>ld <Plug>(coc-definition)
-    nmap <silent> <leader>lr <Plug>(coc-references)
-
-    " Highlight the symbol and its references when holding the cursor.
-    autocmd CursorHold * silent call CocActionAsync('highlight')
-
-    " Symbol renaming.
-    nmap <leader>rn <Plug>(coc-rename)
-
-    augroup mygroup
-      autocmd!
-      " Setup formatexpr specified filetype(s).
-      autocmd FileType typescript,json,java setl formatexpr=CocAction('formatSelected')
-      " Update signature help on jump placeholder.
-      autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-    augroup end
-
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-    autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
-    nnoremap <m-cr> :CocAction<cr>
-
-  " {{{ COC END }}}
 
   " {{{ FUGITIVE }}}
 
