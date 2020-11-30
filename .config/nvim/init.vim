@@ -24,7 +24,6 @@
     nnoremap <leader>k <c-w>k
     nnoremap <leader>l <c-w>l
     nnoremap <c-o> o<esc>
-    nnoremap / :Lines<cr>
     nnoremap <tab> :bnext<cr>
     nnoremap <s-tab> :bprevious<cr>
     nnoremap <leader>q :Bclose<cr>
@@ -42,16 +41,15 @@
 " {{{ PLUGINS }}}
 
   call plug#begin("~/.config/nvim/plugged")
-
-    Plug 'dense-analysis/ale'
+    
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     Plug 'Shougo/echodoc.vim'
     Plug 'SirVer/ultisnips'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'Yggdroot/indentLine'
     Plug 'airblade/vim-gitgutter'
-    Plug 'alvan/vim-closetag'
     Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+    Plug 'dense-analysis/ale'
     Plug 'dracula/vim'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'francoiscabrol/ranger.vim'
@@ -105,58 +103,33 @@
 
     let g:LanguageClient_serverCommands = {
       \ 'rust': ['rls'],
-      \ 'java': ['jdtls'],
-      \ 'go': ['gopls']
+      \ 'java': ['jdtls', '-data', getcwd()],
+      \ 'go': ['gopls'],
+      \ 'sh': ['bash-language-server', 'start']
       \ }
 
-    let g:deoplete#enable_at_startup = 1
-    set completeopt=longest,menuone,preview
-    set completeopt-=preview
-
-    let g:deoplete#custom#var = {}
-    let g:deoplete#custom#var.javascript = [
-          \ 'tern#Complete',
-          \ 'jspc#omni',
-          \ 'javascriptcomplete#CompleteJS'
-          \ ]
-
-    call deoplete#custom#option({
-          \ 'ignore_sources': {
-          \ '_': ['around']
-          \ },
-          \ 'sources': {
-          \ 'javascript': ['file', 'ternjs'],
-          \ 'php': ['phpactor', 'ultisnips']
-          \ },
-          \ })
-
-    inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ deoplete#mappings#manual_complete()
-
-    function! s:check_back_space() abort
-      let col = col('.') - 1
-      return !col || getline('.')[col - 1]  =~ '\s'
-    endfunction
-
-    inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
-    
-    nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-    nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-    nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-    nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-    nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
-    nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
-    nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-    nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
-    nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-    nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+    nnoremap <leader>ld :call LanguageClient#textDocument_definition()<cr>
+    nnoremap <leader>lr :call LanguageClient#textDocument_rename()<cr>
+    nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<cr>
+    nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<cr>
+    nnoremap <leader>lx :call LanguageClient#textDocument_references()<cr>
+    nnoremap <leader>lc :call LanguageClient#textDocument_completion()<cr>
+    nnoremap <leader>lh :call LanguageClient#textDocument_hover()<cr>
+    nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<cr>
+    nnoremap <leader>lm :call LanguageClient_contextMenu()<cr>
+    nnoremap <leader>la :call LanguageClient_textDocument_codeAction()<cr>
 
     let g:echodoc#enable_at_startup = 1
     let g:echodoc#type = 'signature'
 
-    " {{{ LSP END }}}
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+    let g:deoplete#enable_at_startup = 1
+    inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+    inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+    inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<cr>"
+    set completeopt+=noselect,menuone,preview
+
+  " {{{ LSP END }}}
 
   " {{{ ALE }}}
 
@@ -182,7 +155,7 @@
 
     let g:NERDTreeGitStatusUseNerdFonts = 1
     let g:NERDTreeGitStatusShowIgnored = 1
-    nnoremap <leader>t :NERDTreeTabsToggle<cr>
+    nnoremap <leader>t :NERDTreeToggle<cr>
 
   " {{{ NERD TREE END }}}
   
@@ -217,15 +190,6 @@
 
   " {{{ AIRLINE END }}}
 
-  " {{{ CLOSETAG }}}
-
-    let g:closetag_filenames = '*.xml'
-    let g:closetag_xhtml_filenames = '*.xml'
-    let g:closetag_filetypes = 'xml'
-    let g:closetag_xhtml_filetypes = 'xml'
-
-  " {{{ CLOSETAG END }}}
-
   " {{{ FUGITIVE }}}
 
     nnoremap <leader>gs :G<cr>
@@ -238,6 +202,7 @@
 
   " {{{ FZF }}}
 
+    nnoremap / :BLines<cr>
     nnoremap <c-p> :Files<cr>
 
   " {{{ FZF END }}}
@@ -272,10 +237,11 @@
 
   " {{{ ULTISNIPS }}}
 
-    let g:UltiSnipsExpandTrigger="<c-j>"
-    let g:UltiSnipsJumpForwardTrigger="<c-b>"
-    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-    let g:UltiSnipsEditSplit="vertical"
+    imap <c-u> <Plug>(ultisnips_expand)
+    let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+    let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
+    let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+    let g:UltiSnipsRemoveSelectModeMappings = 0
 
   " {{{ ULTISNIPS END }}}
 
@@ -309,6 +275,7 @@
 
   autocmd CursorMoved * normal zz
   colorscheme dracula " Dracula coloscheme is awesome
+  filetype plugin indent on
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable true color
   set autoindent " Automatically indent
   set background=dark " Set dark background
@@ -329,7 +296,7 @@
   set nowrap " Don't wrap lines
   set nowritebackup
   set pumheight=10
-  set relativenumber number " Relative Line Numbers
+  set relativenumber number " Relative line numbers
   set shiftwidth=2
   set shortmess+=c
   set showtabline=2
@@ -344,7 +311,7 @@
   set undodir=~/.config/nvim/undo
   set undofile
   set updatetime=100
-  syntax enable
+  syntax enable " Enable syntax highlighting
 
 " {{{ GENERAL SETTINGS END }}}
 

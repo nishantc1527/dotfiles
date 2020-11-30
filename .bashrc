@@ -15,7 +15,7 @@ for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
 do alias $elem="exit"
 done
 
-for elem in {c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}{c,l,e,a,r}
+for elem in {c,l,s}{c,l,s}{c,l,s}
 do alias $elem="clear"
 done
 
@@ -39,17 +39,20 @@ alias cls="clear"
 
 alias add='git add .'
 alias branch='git branch'
+alias checkout='git checkout'
 alias clone='git clone'
 alias commit='git commit'
 alias diff='git diff'
-alias log="git log"
+alias log="git log --oneline --all"
 alias pull='git pull'
 alias push='git push'
 alias reset='git reset'
 alias restore="git restore"
 alias revert="git revert"
-alias status='git status'
 alias show='git show'
+alias status='git status'
+alias switch='git switch'
+alias worktree='git worktree'
 
 alias tree="tree -C"
 
@@ -62,11 +65,12 @@ alias pip="pip3"
 
 alias i=$'yes | sudo pacman -Syu $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
 alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
+alias c=$'git reset --hard $(git log --oneline --all | fzf --preview=\'git show {1} --color\' | awk \'{print $1;}\')'
 alias h="\$(history | awk '{\$1 = \"\"; print \$0}' | fzf)"
 alias x="\$(compgen -c | sort -u | fzf)"
 alias g="cd \$(~/dirs.py | fzf)"
 alias gg="cd \$(~/home-dirs.py | fzf)"
-alias v="vim \$(fzf)"
+alias v="vim \$(fd --hidden | fzf)"
 
 alias sync="timedatectl set-ntp true"
 
@@ -79,9 +83,6 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 alias gw="./gradlew"
-alias run="./gradlew run"
-alias brun="./gradlew bootRun"
-alias build="./gradlew build"
 
 alias vimb="vimb google.com"
 alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
