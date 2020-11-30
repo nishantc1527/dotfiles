@@ -76,6 +76,7 @@
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'voldikss/vim-floaterm'
+    Plug 'qsdrqs/java-syntax.vim'
 
   " {{{ PRODUCTIVITY END }}}
 
@@ -274,6 +275,8 @@
 " {{{ GENERAL SETTINGS }}}
 
   autocmd CursorMoved * normal zz
+  autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+  autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
   colorscheme dracula " Dracula coloscheme is awesome
   filetype plugin indent on
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable true color
@@ -311,7 +314,7 @@
   set undodir=~/.config/nvim/undo
   set undofile
   set updatetime=100
-  syntax enable " Enable syntax highlighting
+  syntax on " Enable syntax highlighting
 
 " {{{ GENERAL SETTINGS END }}}
 

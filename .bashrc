@@ -68,7 +68,7 @@ alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf
 alias c=$'git reset --hard $(git log --oneline --all | fzf --preview=\'git show {1} --color\' | awk \'{print $1;}\')'
 alias h="\$(history | awk '{\$1 = \"\"; print \$0}' | fzf)"
 alias x="\$(compgen -c | sort -u | fzf)"
-alias g="cd \$(~/dirs.py | fzf)"
+alias g="cd \$(~/dirs.py | fzf --preview \"ls {}\")"
 alias gg="cd \$(~/home-dirs.py | fzf)"
 alias v="vim \$(fd --hidden | fzf)"
 
@@ -95,3 +95,5 @@ alias grep="grep --color=auto"
 alias ip='ip -color=auto'
 
 alias get="go get"
+
+alias qemu="qemu-system-x86_64"
