@@ -51,6 +51,7 @@
     Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
     Plug 'dense-analysis/ale'
     Plug 'dracula/vim'
+    Plug 'dylon/vim-antlr'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'francoiscabrol/ranger.vim'
     Plug 'hdiniz/vim-gradle'
@@ -63,6 +64,7 @@
     Plug 'luochen1990/rainbow'
     Plug 'mhinz/vim-startify'
     Plug 'preservim/nerdtree'
+    Plug 'qsdrqs/java-syntax.vim'
     Plug 'rbgrouleff/bclose.vim'
     Plug 'ruby-formatter/rufo-vim'
     Plug 'rust-lang/rust.vim'
@@ -76,7 +78,6 @@
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'voldikss/vim-floaterm'
-    Plug 'qsdrqs/java-syntax.vim'
 
   " {{{ PRODUCTIVITY END }}}
 
@@ -275,8 +276,6 @@
 " {{{ GENERAL SETTINGS }}}
 
   autocmd CursorMoved * normal zz
-  autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
-  autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
   colorscheme dracula " Dracula coloscheme is awesome
   filetype plugin indent on
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable true color
