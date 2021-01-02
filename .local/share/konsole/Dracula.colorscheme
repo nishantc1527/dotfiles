@@ -89,8 +89,8 @@ Color=248,248,242
 Color=255,255,255
 
 [General]
-Blur=false
+Blur=true
 ColorRandomization=false
 Description=Dracula
-Opacity=0
+Opacity=1
 Wallpaper=

@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 neofetch
 
 . ~/.fancy-git/prompt.sh
+. ~/.git-completion.bash
 
 for elem in {e,x,i,t}{e,x,i,t}{e,x,i,t}{e,x,i,t}
 do alias $elem="exit"
@@ -62,13 +63,14 @@ alias vim="nvim"
 set -o vi
 
 alias pip="pip3"
+alias find="fd"
 
 alias i=$'yes | sudo pacman -Syu $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
 alias u=$'yes | sudo pacman -Rns $(pacman -Sl | awk \'{$1= ""; print $0}\' | fzf --multi --preview \'pacman -Si {1}\' | awk \'{print $1;}\' | sort)'
 alias c=$'git reset --hard $(git log --oneline --all | fzf --preview=\'git show {1} --color\' | awk \'{print $1;}\')'
 alias h="\$(history | awk '{\$1 = \"\"; print \$0}' | fzf)"
 alias x="\$(compgen -c | sort -u | fzf)"
-alias g="cd \$(~/dirs.py | fzf --preview \"ls {}\")"
+alias g="cd \$(~/dirs.py | fzf)"
 alias gg="cd \$(~/home-dirs.py | fzf)"
 alias v="vim \$(fd --hidden | fzf)"
 
@@ -97,3 +99,15 @@ alias ip='ip -color=auto'
 alias get="go get"
 
 alias qemu="qemu-system-x86_64"
+
+lg()
+{
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
